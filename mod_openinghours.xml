@@ -67,9 +67,18 @@
 	
 	<config> 
 	<fields name="params" addfieldpath="modules/mod_openinghours/elements/">	
-	<fieldset name="basic">	
-	
-	<field name="Showfooter" type="pro"  label="MOD_OPENINGHOURS_BASIC_FOOTER_LABEL" description="MOD_OPENINGHOURS_BASIC_FOOTER_DESC" />
+	<fieldset name="basic">
+		<field name="Regulardesc" type="note" label="MOD_OPENINGHOURS_REGULAR_HOURS_DESC"/>
+		<field name="Regularnote" type="note" label="MOD_OPENINGHOURS_REGULAR_HOURS_NOTE"/>
+		<field name="Mondaytimes1" type="text" default="08:30 - 18:00" label="MONDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
+		<field name="Tuesdaytimes1" type="text" default="08:30 - 18:00" label="TUESDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
+		<field name="Wednesdaytimes1" type="text" default="08:30 - 18:00" label="WEDNESDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
+		<field name="Thursdaytimes1" type="text" default="08:30 - 18:00" label="THURSDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
+		<field name="Fridaytimes1" type="text" default="08:30 - 18:00" label="FRIDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
+		<field name="Saturdaytimes1" type="text" default="08:30 - 18:00" label="SATURDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
+		<field name="Sundaytimes1" type="text" default="CLOSED" label="SUNDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
+
+		<field name="Showfooter" type="pro"  label="MOD_OPENINGHOURS_BASIC_FOOTER_LABEL" description="MOD_OPENINGHOURS_BASIC_FOOTER_DESC" />
 				
 	<field name="Usemicro" type="radio" class="btn-group" default="1" label="MOD_OPENINGHOURS_USE_MICRODATA_LABEL" description="MOD_OPENINGHOURS_USE_MICRODATA_DESC" >
 					<option value="0">JNO</option>
@@ -77,28 +86,17 @@
 				</field>	
 				
 	</fieldset>
-	<fieldset name="Regular" label="MOD_OPENINGHOURS_REGULAR_HOURS_LABEL">
-	<field name="Regulardesc" type="note" label="" description="MOD_OPENINGHOURS_REGULAR_HOURS_DESC"/>	
-	<field name="Regularnote" type="note" label="MOD_OPENINGHOURS_REGULAR_HOURS_LABEL" description="MOD_OPENINGHOURS_REGULAR_HOURS_NOTE" class="alert alert-info"  />			
-    <field name="Mondaytimes1" type="text" default="08:30 - 18:00" label="MONDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>    
-    <field name="Tuesdaytimes1" type="text" default="08:30 - 18:00" label="TUESDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>  
-    <field name="Wednesdaytimes1" type="text" default="08:30 - 18:00" label="WEDNESDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>    
-    <field name="Thursdaytimes1" type="text" default="08:30 - 18:00" label="THURSDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>       
-    <field name="Fridaytimes1" type="text" default="08:30 - 18:00" label="FRIDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>    
-    <field name="Saturdaytimes1" type="text" default="08:30 - 18:00" label="SATURDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>       
-    <field name="Sundaytimes1" type="text" default="CLOSED" label="SUNDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/> 				
-	</fieldset>
-	
+
 	<fieldset name="Exceptional" label="MOD_OPENINGHOURS_EXCEP_HOURS_LABEL">
-	<field name="Excepdesc" type="note" label="" description="MOD_OPENINGHOURS_EXCEP_HOURS_DESC" />	
-	<field name="Excepmethod1" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD1_LABEL" description="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD1_DESC" class="alert alert-info"  />	
+
+	<field name="Excepmethod1" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD1_DESC"  />
 
    	 	<field name="1" type="pro" label=" "/>
 		
-	<field name="Excepmethod2" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD2_LABEL" description="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD2_DESC" class="alert alert-info"  />
+	<field name="Excepmethod2" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD2_DESC" />
 		<field name="2" type="pro" label=" "/>
 		
-	<field name="Excepmethod3" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD3_LABEL" description="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD3_DESC" class="alert alert-info"  />	
+	<field name="Excepmethod3" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD3_DESC" />
 		<field name="3" type="pro" label=" "/>
 	</fieldset>
 		
@@ -162,11 +160,11 @@
 	</fieldset>	
 			
 	<fieldset name="note" label="MOD_OPENINGHOURS_DISPLAY_NOTES_LABEL">
-    <field name="Viewnotes" type="radio" class="btn-group" default="0" label="MOD_OPENINGHOURS_DISPLAY_VIEWNOTES_LABEL" description="MOD_OPENINGHOURS_DISPLAY_VIEWNOTES_DESC" >
+    <field name="Viewnotes" type="list" default="0" label="MOD_OPENINGHOURS_DISPLAY_VIEWNOTES_LABEL" description="MOD_OPENINGHOURS_DISPLAY_VIEWNOTES_DESC" >
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field> 
-	<field name="Notes" type="textarea" width="300" filter="safehtml" label="MOD_OPENINGHOURS_DISPLAY_NOTES_LABEL" description="MOD_OPENINGHOURS_DISPLAY_NOTES_DESC"/>
+	<field name="Notes" type="textarea" width="300" filter="safehtml" label="MOD_OPENINGHOURS_DISPLAY_NOTES_LABEL" description="MOD_OPENINGHOURS_DISPLAY_NOTES_DESC" showon="Viewnotes!:0"/>
 					
 	</fieldset>
 	
