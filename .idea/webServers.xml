@@ -2,10 +2,10 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="551f9e77-b812-46df-926d-9ef73bb4f906" name="Joomla 4 FREE" url="http://localhost/dev/joomla4-free">
+      <webServer id="e1730786-b8fe-4bf9-bfee-4766601fecfb" name="Joomla 4 FREE (project level)" url="http://localhost/dev/joomla4-free">
         <fileTransfer mountedRoot="D:\wamp64\www\dev\joomla4-free" accessType="MOUNT" port="0" />
       </webServer>
-      <webServer id="41fc178b-7762-4dc6-b4bd-6596387c4e1f" name="Joomla 3 FREE" url="http://localhost/dev/joomla3-free">
+      <webServer id="d625b7a9-9277-4ab6-ab46-ac977db970f0" name="Joomla 3 FREE (project level)" url="http://localhost/dev/joomla3-free">
         <fileTransfer mountedRoot="D:\wamp64\www\dev\joomla3-free" accessType="MOUNT" port="0" />
       </webServer>
     </option>

@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~  package: Joomla Opening Hours module - FREE Version
-  ~  copyright: Copyright (c) 2020. Jeroen Moolenschot | Joomill
-  ~  license: GNU General Public License version 3 or later
-  ~  link: https://www.joomill-extensions.com
-  -->
-
 <extension type="module" version="2.5"  client="site" method="upgrade">
-
     <name>Opening Hours module</name>
     <version>3.6.0</version>
     <creationDate>1 June 2020</creationDate>

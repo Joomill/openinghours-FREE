@@ -10,11 +10,41 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="Joomla 3 FREE (project level)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="modules" local="$PROJECT_DIR$/../" web="/" />
+            <mapping deploy="language" local="$PROJECT_DIR$/language" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Joomla 3 PRO">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="Joomla 4 FREE">
         <serverdata>
           <mappings>
             <mapping deploy="modules" local="$PROJECT_DIR$/../" web="/" />
             <mapping deploy="language" local="$PROJECT_DIR$/language" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Joomla 4 FREE (project level)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="modules" local="$PROJECT_DIR$/../" web="/" />
+            <mapping deploy="language" local="$PROJECT_DIR$/language" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Joomla 4 PRO">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
