@@ -5,6 +5,9 @@
       <webServer id="551f9e77-b812-46df-926d-9ef73bb4f906" name="Joomla 4 FREE" url="http://localhost/dev/joomla4-free">
         <fileTransfer mountedRoot="D:\wamp64\www\dev\joomla4-free" accessType="MOUNT" port="0" />
       </webServer>
+      <webServer id="41fc178b-7762-4dc6-b4bd-6596387c4e1f" name="Joomla 3 FREE" url="http://localhost/dev/joomla3-free">
+        <fileTransfer mountedRoot="D:\wamp64\www\dev\joomla3-free" accessType="MOUNT" port="0" />
+      </webServer>
     </option>
   </component>
 </project>
