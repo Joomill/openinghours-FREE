@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~  package: Joomla Opening Hours module
+  ~  copyright: Copyright (c) 2020. Jeroen Moolenschot | Joomill
+  ~  license: GNU General Public License version 3 or later
+  ~  link: https://www.joomill-extensions.com
+  -->
+
+<extension type="module" version="2.5"  client="site" method="upgrade">
+
+    <name>Opening Hours module</name>
+    <version>3.6.0</version>
+    <creationDate>1 June 2020</creationDate>
+	<client>0</client>
+    <author>Joomill</author>
+    <authorEmail>info@joomill-extensions.com</authorEmail>
+    <authorUrl>www.joomill-extensions.com</authorUrl>
+	<license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
+	<description><![CDATA[
+
+	<span class="readonly"><h1>Joomla Opening Hours module <small>Free version</small></h1>
+		<p>This module simply insert your opening hours on your Joomla! website.</p>
+		<p class="alert">This is a free version. You are limited to use only 1 opening a day and options like exceptional openings, current open status and advanced display options are disabled.<br/><a href="http://www.joomill-extensions.com/subscriptions" target="_blank">When you like it, Get your PRO version here.</a></p>
+
+ 		<p class="margintop">
+		<a href="https://www.joomill-extensions.com/extensions/opening-hours-days-week-closings/documentation" target="_blank" class="btn btn-info">Manual</a>
+		<a href="https://www.joomill-extensions.com/support" target="_blank" class="btn btn-info">Support</a>
+		<a href="https://extensions.joomla.org/extensions/contacts-and-feedback/opening-hours/16921" target="_blank" class="btn btn-info">Extensions Directory</a>
+		</p>
+
+		<p>Follow us for more information about Joomla and updates for our extensions:
+		<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fjoomill&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+		<a href="https://twitter.com/joomill" class="twitter-follow-button" data-show-count="true" data-dnt="true">Follow @joomill</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</p>
+
+		<h2>Thank you and enjoy,</h2>
+		<p><a href="https://www.joomill-extensions.com/" target="_blank"><img src="https://www.joomill-extensions.com/images/logo.png" width="165" height="66"/></a></p>
+
+		<p class="license">Joomla Opening Hours module is released under the <a target="_blank" href="https://www.gnu.org/licenses/gpl-2.0.html">GNU/GPL v2 license.</a></p>
+	</span>
+
+	<style type="text/css">
+				span.readonly h1 { clear:both; font-family: Arial; font-size:26px; margin: 0 26px 10px; color:#333; font-weight: normal; border-bottom: 1px solid #eee; }
+				span.readonly h2 { clear:both; font-family: Georgia, sans-serif; font-size:20px; margin: 30px 26px 10px; color:#333; font-weight: normal; }
+				span.readonly { padding: 10px; font-family: Arial; font-size:13px !important; font-weight: normal !important; text-align: justify; color: #4d4d4d; line-height: 24px; }
+				span.readonly p { margin: 0 26px 10px }
+				span.readonly p.margintop { margin-top: 30px }
+				span.readonly p.license { font-size: 11px; margin: 30px 26px 0; padding: 6px 0; }
+				.alert-danger .alert-link { color: #843534 } .alert .alert-link { font-weight: 700 }
+	}
+	</style>
+		]]>
+	</description>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB.mod_openinghours.ini</language>
+		<language tag="nl-NL">nl-NL.mod_openinghours.ini</language>
+	</languages>
+
+	<files>
+        <filename module="mod_openinghours">mod_openinghours.php</filename>
+        <filename>index.html</filename>
+		<folder>elements</folder>
+        <folder>tmpl</folder>
+    </files>
+	
+	<config> 
+	<fields name="params" addfieldpath="modules/mod_openinghours/elements/">	
+	<fieldset name="basic">	
+	
+	<field name="Showfooter" type="pro"  label="MOD_OPENINGHOURS_BASIC_FOOTER_LABEL" description="MOD_OPENINGHOURS_BASIC_FOOTER_DESC" />
+				
+	<field name="Usemicro" type="radio" class="btn-group" default="1" label="MOD_OPENINGHOURS_USE_MICRODATA_LABEL" description="MOD_OPENINGHOURS_USE_MICRODATA_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				
+	</fieldset>
+	<fieldset name="Regular" label="MOD_OPENINGHOURS_REGULAR_HOURS_LABEL">
+	<field name="Regulardesc" type="note" label="" description="MOD_OPENINGHOURS_REGULAR_HOURS_DESC"/>	
+	<field name="Regularnote" type="note" label="MOD_OPENINGHOURS_REGULAR_HOURS_LABEL" description="MOD_OPENINGHOURS_REGULAR_HOURS_NOTE" class="alert alert-info"  />			
+    <field name="Mondaytimes1" type="text" default="08:30 - 18:00" label="MONDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>    
+    <field name="Tuesdaytimes1" type="text" default="08:30 - 18:00" label="TUESDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>  
+    <field name="Wednesdaytimes1" type="text" default="08:30 - 18:00" label="WEDNESDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>    
+    <field name="Thursdaytimes1" type="text" default="08:30 - 18:00" label="THURSDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>       
+    <field name="Fridaytimes1" type="text" default="08:30 - 18:00" label="FRIDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>    
+    <field name="Saturdaytimes1" type="text" default="08:30 - 18:00" label="SATURDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>       
+    <field name="Sundaytimes1" type="text" default="CLOSED" label="SUNDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/> 				
+	</fieldset>
+	
+	<fieldset name="Exceptional" label="MOD_OPENINGHOURS_EXCEP_HOURS_LABEL">
+	<field name="Excepdesc" type="note" label="" description="MOD_OPENINGHOURS_EXCEP_HOURS_DESC" />	
+	<field name="Excepmethod1" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD1_LABEL" description="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD1_DESC" class="alert alert-info"  />	
+
+   	 	<field name="1" type="pro" label=" "/>
+		
+	<field name="Excepmethod2" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD2_LABEL" description="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD2_DESC" class="alert alert-info"  />
+		<field name="2" type="pro" label=" "/>
+		
+	<field name="Excepmethod3" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD3_LABEL" description="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD3_DESC" class="alert alert-info"  />	
+		<field name="3" type="pro" label=" "/>
+	</fieldset>
+		
+	<fieldset name="Display" label="MOD_OPENINGHOURS_DISPLAY_LABEL">
+		
+		<field name="Width" type="text" default="100%" label="MOD_OPENINGHOURS_DISPLAY_WIDTH_LABEL" description="MOD_OPENINGHOURS_DISPLAY_WIDTH_DESC"/>
+		<field name="Dayalign" type="radio" class="btn-group" default="left" label="MOD_OPENINGHOURS_DISPLAY_DAYALIGN_LABEL" description="MOD_OPENINGHOURS_DISPLAY_ALIGN_DESC" >
+					<option value="left">MOD_OPENINGHOURS_LEFT</option>
+					<option value="center">MOD_OPENINGHOURS_CENTER</option>
+					<option value="right">MOD_OPENINGHOURS_RIGHT</option>
+				</field>
+				<field name="Timealign" type="radio" class="btn-group" default="right" label="MOD_OPENINGHOURS_DISPLAY_TIMEALIGN_LABEL" description="MOD_OPENINGHOURS_DISPLAY_ALIGN_DESC" >
+					<option value="left">MOD_OPENINGHOURS_LEFT</option>
+					<option value="center">MOD_OPENINGHOURS_CENTER</option>
+					<option value="right">MOD_OPENINGHOURS_RIGHT</option>
+				</field>
+		
+		<field name="Displaydate" type="note" label="MOD_OPENINGHOURS_DISPLAY_DATETIME_LABEL"/>	 	
+		
+				<field name="Weekstart" type="radio" class="btn-group" default="2" label="MOD_OPENINGHOURS_DISPLAY_WEEKSTART_LABEL" description="MOD_OPENINGHOURS_DISPLAY_WEEKSTART_DESC" >
+					<option value="3">SATURDAY</option>
+					<option value="1">SUNDAY</option>
+					<option value="2">MONDAY</option>
+				</field>
+
+		<field name="next7days" type="pro"  label="MOD_OPENINGHOURS_NEXT7DAYS" />
+
+		<field name="Onlytoday" type="pro" label="MOD_OPENINGHOURS_DISPLAY_ONLYTODAY_LABEL" description="MOD_OPENINGHOURS_DISPLAY_ONLYTODAY_DESC" />
+						
+		<field name="Monfri" type="pro" label="MOD_OPENINGHOURS_DISPLAY_MONFRI_LABEL" description="MOD_OPENINGHOURS_DISPLAY_MONFRI_DESC" />
+					
+		<field name="Viewdates" type="pro"  label="MOD_OPENINGHOURS_DISPLAY_DATES_LABEL" description="MOD_OPENINGHOURS_DISPLAY_DATES_DESC" />
+		
+		<field name="Datetime" type="note" description="MOD_OPENINGHOURS_DISPLAY_DATETIMEFORMAT_DESC" />
+		
+		<field name="Dateformat" type="pro" label="MOD_OPENINGHOURS_DISPLAY_DATEFORMAT_LABEL" description="MOD_OPENINGHOURS_DISPLAY_DATEFORMAT_DESC"/>
+		
+		<field name="Timeformat" type="text" default="H:i" label="MOD_OPENINGHOURS_DISPLAY_TIMEFORMAT_LABEL" description="MOD_OPENINGHOURS_DISPLAY_TIMEFORMAT_DESC">
+		</field>
+			
+		<field name="Timezone" type="timezone" default="0" label="MOD_OPENINGHOURS_DISPLAY_TIMEZONE_LABEL" description="MOD_OPENINGHOURS_DISPLAY_TIMEZONE_DESC" >
+			 </field> 			
+				
+	
+	<field name="Displayfonts" type="note" label="MOD_OPENINGHOURS_DISPLAY_FONTS_LABEL"/>	 
+	
+	<field name="Font" type="pro" label="MOD_OPENINGHOURS_DISPLAY_FONT_LABEL" description="MOD_OPENINGHOURS_DISPLAY_FONT_DESC" />
+				 
+    <field name="Fontsize" type="pro" label="MOD_OPENINGHOURS_DISPLAY_FONTSIZE_LABEL" description="MOD_OPENINGHOURS_DISPLAY_FONTSIZE_DESC" />
+
+	
+	<field name="Displayhighlight" type="note" label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTS_LABEL"/>
+	  
+    <field name="Highlight" type="radio" class="btn-group" default="1" label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHT_LABEL" description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHT_DESC" >
+				    <option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>  				 
+    <field name="Highlightcolor" type="pro" label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTCOLOR_LABEL" description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTCOLOR_DESC" />
+    <field name="Highlightbold" type="pro" label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTBOLD_LABEL" description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTBOLD_DESC" />
+    <field name="Highlightitalic" type="pro" label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTITALIC_LABEL" description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTITALIC_DESC" />				
+	</fieldset>	
+			
+	<fieldset name="note" label="MOD_OPENINGHOURS_DISPLAY_NOTES_LABEL">
+    <field name="Viewnotes" type="radio" class="btn-group" default="0" label="MOD_OPENINGHOURS_DISPLAY_VIEWNOTES_LABEL" description="MOD_OPENINGHOURS_DISPLAY_VIEWNOTES_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field> 
+	<field name="Notes" type="textarea" width="300" filter="safehtml" label="MOD_OPENINGHOURS_DISPLAY_NOTES_LABEL" description="MOD_OPENINGHOURS_DISPLAY_NOTES_DESC"/>
+					
+	</fieldset>
+	
+	<fieldset name="open" label="MOD_OPENINGHOURS_CURRENTLY_OPEN_LABEL">			
+	<field name="Showopen" type="pro" label="MOD_OPENINGHOURS_SHOW_CURRENTLY_OPEN_LABEL" description="MOD_OPENINGHOURS_SHOW_CURRENTLY_OPEN_DESC"/>
+	<field name="Showclosed" type="pro" label="MOD_OPENINGHOURS_SHOW_CURRENTLY_CLOSED_LABEL" description="MOD_OPENINGHOURS_SHOW_CURRENTLY_CLOSED_DESC" />	
+	</fieldset>
+	
+	<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="Debug" type="radio" class="btn-group" default="0" label="MOD_OPENINGHOURS_DEBUG_LABEL" description="MOD_OPENINGHOURS_DEBUG_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>			
+			</fieldset>
+    </fields>
+	</config>
+	
+	<!-- Scripts to run on installation -->
+	<scriptfile>script.php</scriptfile>
+ 
+<updateservers>		
+<server type="extension" priority="1" name="Opening Hours Update"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_rdsubs&view=updater&format=xml&cat=1]]></server>	
+</updateservers>
+
+</extension>
