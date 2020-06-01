@@ -60,7 +60,6 @@
 
 	<files>
         <filename module="mod_openinghours">mod_openinghours.php</filename>
-        <filename>index.html</filename>
 		<folder>elements</folder>
         <folder>tmpl</folder>
     </files>
