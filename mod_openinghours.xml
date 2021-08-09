@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="2.5"  client="site" method="upgrade">
 	<name>Opening Hours module</name>
-	<version>4.0.0 PRO</version>
+	<version>4.0.0</version>
 	<creationDate>09-08-2021</creationDate>
 	<client>0</client>
 	<author>Joomill</author>
@@ -10,10 +10,11 @@
 	<license>https://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
 	<description><![CDATA[
 		<p>This module simply insert your opening hours on your Joomla! website.</p>
+		<div class="alert alert-success">This is the FREE version of Joomla Opening Hours module. Some features and support are only available in the PRO Version.</div>
  		<p>
 		<a href="https://www.joomill-extensions.com/extensions/opening-hours-days-week-closings/documentation" target="_blank" class="btn btn-primary">Manual</a>
-		<a href="https://www.joomill-extensions.com/support" target="_blank" class="btn btn-primary">Support</a>
 		<a href="https://extensions.joomla.org/extension/contacts-and-feedback/opening-hours/opening-hours-pro/" target="_blank" class="btn btn-primary">Extensions Directory</a>
+		<a href="https://www.joomill-extensions.com/extensions/opening-hours-days-week-closings" target="_blank" class="btn btn-success">Get PRO Version</a>
 		</p>
 		]]>
 	</description>
@@ -26,129 +27,355 @@
     </files>
 	
 	<config> 
-	<fields name="params" addfieldpath="modules/mod_openinghours/elements/">	
+		<fields name="params" addfieldpath="modules/mod_openinghours/elements/">
 
-	<fieldset name="basic">
-		<field name="Regulardesc" type="note" label="MOD_OPENINGHOURS_REGULAR_HOURS_DESC"/>
-		<field name="Regularnote" type="note" label="MOD_OPENINGHOURS_REGULAR_HOURS_NOTE"/>
-		<field name="Mondaytimes1" type="text" default="08:30 - 18:00" label="MONDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
-		<field name="Tuesdaytimes1" type="text" default="08:30 - 18:00" label="TUESDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
-		<field name="Wednesdaytimes1" type="text" default="08:30 - 18:00" label="WEDNESDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
-		<field name="Thursdaytimes1" type="text" default="08:30 - 18:00" label="THURSDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
-		<field name="Fridaytimes1" type="text" default="08:30 - 18:00" label="FRIDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
-		<field name="Saturdaytimes1" type="text" default="08:30 - 18:00" label="SATURDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
-		<field name="Sundaytimes1" type="text" default="CLOSED" label="SUNDAY" description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"/>
-
-		<field name="Showfooter" type="pro"  label="MOD_OPENINGHOURS_BASIC_FOOTER_LABEL" description="MOD_OPENINGHOURS_BASIC_FOOTER_DESC" />
-				
-	<field name="Usemicro" type="radio" class="btn-group" default="1" label="MOD_OPENINGHOURS_USE_MICRODATA_LABEL" description="MOD_OPENINGHOURS_USE_MICRODATA_DESC" >
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>	
-				
-	</fieldset>
-
-	<fieldset name="Exceptional" label="MOD_OPENINGHOURS_EXCEP_HOURS_LABEL">
-
-	<field name="Excepmethod1" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD1_DESC"  />
-
-   	 	<field name="1" type="pro" label=" "/>
-		
-	<field name="Excepmethod2" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD2_DESC" />
-		<field name="2" type="pro" label=" "/>
-		
-	<field name="Excepmethod3" type="note" label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD3_DESC" />
-		<field name="3" type="pro" label=" "/>
-	</fieldset>
-		
-	<fieldset name="Display" label="MOD_OPENINGHOURS_DISPLAY_LABEL">
-		
-		<field name="Width" type="text" default="100%" label="MOD_OPENINGHOURS_DISPLAY_WIDTH_LABEL" description="MOD_OPENINGHOURS_DISPLAY_WIDTH_DESC"/>
-		<field name="Dayalign" type="radio" class="btn-group" default="left" label="MOD_OPENINGHOURS_DISPLAY_DAYALIGN_LABEL" description="MOD_OPENINGHOURS_DISPLAY_ALIGN_DESC" >
-					<option value="left">MOD_OPENINGHOURS_LEFT</option>
-					<option value="center">MOD_OPENINGHOURS_CENTER</option>
-					<option value="right">MOD_OPENINGHOURS_RIGHT</option>
-				</field>
-				<field name="Timealign" type="radio" class="btn-group" default="right" label="MOD_OPENINGHOURS_DISPLAY_TIMEALIGN_LABEL" description="MOD_OPENINGHOURS_DISPLAY_ALIGN_DESC" >
-					<option value="left">MOD_OPENINGHOURS_LEFT</option>
-					<option value="center">MOD_OPENINGHOURS_CENTER</option>
-					<option value="right">MOD_OPENINGHOURS_RIGHT</option>
-				</field>
-		
-		<field name="Displaydate" type="note" label="MOD_OPENINGHOURS_DISPLAY_DATETIME_LABEL"/>	 	
-		
-				<field name="Weekstart" type="radio" class="btn-group" default="2" label="MOD_OPENINGHOURS_DISPLAY_WEEKSTART_LABEL" description="MOD_OPENINGHOURS_DISPLAY_WEEKSTART_DESC" >
-					<option value="3">SATURDAY</option>
-					<option value="1">SUNDAY</option>
-					<option value="2">MONDAY</option>
-				</field>
-
-		<field name="next7days" type="pro"  label="MOD_OPENINGHOURS_NEXT7DAYS" />
-
-		<field name="Onlytoday" type="pro" label="MOD_OPENINGHOURS_DISPLAY_ONLYTODAY_LABEL" description="MOD_OPENINGHOURS_DISPLAY_ONLYTODAY_DESC" />
-						
-		<field name="Monfri" type="pro" label="MOD_OPENINGHOURS_DISPLAY_MONFRI_LABEL" description="MOD_OPENINGHOURS_DISPLAY_MONFRI_DESC" />
-					
-		<field name="Viewdates" type="pro"  label="MOD_OPENINGHOURS_DISPLAY_DATES_LABEL" description="MOD_OPENINGHOURS_DISPLAY_DATES_DESC" />
-		
-		<field name="Datetime" type="note" description="MOD_OPENINGHOURS_DISPLAY_DATETIMEFORMAT_DESC" />
-		
-		<field name="Dateformat" type="pro" label="MOD_OPENINGHOURS_DISPLAY_DATEFORMAT_LABEL" description="MOD_OPENINGHOURS_DISPLAY_DATEFORMAT_DESC"/>
-		
-		<field name="Timeformat" type="text" default="H:i" label="MOD_OPENINGHOURS_DISPLAY_TIMEFORMAT_LABEL" description="MOD_OPENINGHOURS_DISPLAY_TIMEFORMAT_DESC">
-		</field>
-			
-		<field name="Timezone" type="timezone" default="0" label="MOD_OPENINGHOURS_DISPLAY_TIMEZONE_LABEL" description="MOD_OPENINGHOURS_DISPLAY_TIMEZONE_DESC" >
-			 </field> 			
-				
-	
-	<field name="Displayfonts" type="note" label="MOD_OPENINGHOURS_DISPLAY_FONTS_LABEL"/>	 
-	
-	<field name="Font" type="pro" label="MOD_OPENINGHOURS_DISPLAY_FONT_LABEL" description="MOD_OPENINGHOURS_DISPLAY_FONT_DESC" />
-				 
-    <field name="Fontsize" type="pro" label="MOD_OPENINGHOURS_DISPLAY_FONTSIZE_LABEL" description="MOD_OPENINGHOURS_DISPLAY_FONTSIZE_DESC" />
-
-	
-	<field name="Displayhighlight" type="note" label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTS_LABEL"/>
-	  
-    <field name="Highlight" type="radio" class="btn-group" default="1" label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHT_LABEL" description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHT_DESC" >
-				    <option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>  				 
-    <field name="Highlightcolor" type="pro" label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTCOLOR_LABEL" description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTCOLOR_DESC" />
-    <field name="Highlightbold" type="pro" label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTBOLD_LABEL" description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTBOLD_DESC" />
-    <field name="Highlightitalic" type="pro" label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTITALIC_LABEL" description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTITALIC_DESC" />				
-	</fieldset>	
-			
-	<fieldset name="note" label="MOD_OPENINGHOURS_DISPLAY_NOTES_LABEL">
-    <field name="Viewnotes" type="list" default="0" label="MOD_OPENINGHOURS_DISPLAY_VIEWNOTES_LABEL" description="MOD_OPENINGHOURS_DISPLAY_VIEWNOTES_DESC" >
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field> 
-	<field name="Notes" type="textarea" width="300" filter="safehtml" label="MOD_OPENINGHOURS_DISPLAY_NOTES_LABEL" description="MOD_OPENINGHOURS_DISPLAY_NOTES_DESC" showon="Viewnotes!:0"/>
-					
-	</fieldset>
-	
-	<fieldset name="open" label="MOD_OPENINGHOURS_CURRENTLY_OPEN_LABEL">			
-	<field name="Showopen" type="pro" label="MOD_OPENINGHOURS_SHOW_CURRENTLY_OPEN_LABEL" description="MOD_OPENINGHOURS_SHOW_CURRENTLY_OPEN_DESC"/>
-	<field name="Showclosed" type="pro" label="MOD_OPENINGHOURS_SHOW_CURRENTLY_CLOSED_LABEL" description="MOD_OPENINGHOURS_SHOW_CURRENTLY_CLOSED_DESC" />	
-	</fieldset>
-	
-	<fieldset name="advanced">
-				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
-				<field name="Debug" type="radio" class="btn-group" default="0" label="MOD_OPENINGHOURS_DEBUG_LABEL" description="MOD_OPENINGHOURS_DEBUG_DESC" >
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>			
+			<fieldset
+				name="basic"
+			>
+				<field
+					name="Showfooter"
+					type="pro"
+					label="MOD_OPENINGHOURS_BASIC_FOOTER_LABEL"
+					description="MOD_OPENINGHOURS_BASIC_FOOTER_DESC"
+				/>
 			</fieldset>
-    </fields>
+
+			<fieldset
+					name="regular"
+					label="MOD_OPENINGHOURS_REGULAR_HOURS_LABEL"
+					description="MOD_OPENINGHOURS_REGULAR_HOURS_NOTE"
+			>
+				<field
+					name="Mondaytimes1"
+					type="text"
+					default="08:30 - 18:00"
+					label="MONDAY"
+					description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"
+				/>
+				<field
+					name="Tuesdaytimes1"
+					type="text"
+					default="08:30 - 18:00"
+					label="TUESDAY"
+					description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"
+				/>
+				<field
+					name="Wednesdaytimes1"
+					type="text"
+					default="08:30 - 18:00"
+					label="WEDNESDAY"
+					description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"
+				/>
+				<field
+					name="Thursdaytimes1"
+					type="text"
+					default="08:30 - 18:00"
+					label="THURSDAY"
+					description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"
+				/>
+				<field
+					name="Fridaytimes1"
+					type="text"
+					default="08:30 - 18:00"
+					label="FRIDAY"
+					description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"
+				/>
+				<field
+					name="Saturdaytimes1"
+					type="text"
+					default="08:30 - 18:00"
+					label="SATURDAY"
+					description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"
+				/>
+				<field
+					name="Sundaytimes1"
+					type="text"
+					default="CLOSED"
+					label="SUNDAY"
+					description="MOD_OPENINGHOURS_REGULAR_DAYS_DESC"
+				/>
+			</fieldset>
+
+			<fieldset>
+				<field name="Usemicro"
+					   type="radio"
+					   class="btn-group"
+					   default="1"
+					   label="MOD_OPENINGHOURS_USE_MICRODATA_LABEL"
+					   description="MOD_OPENINGHOURS_USE_MICRODATA_DESC"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+
+			<fieldset
+				name="Exceptional"
+				label="MOD_OPENINGHOURS_EXCEP_HOURS_LABEL"
+				description="MOD_OPENINGHOURS_EXCEP_HOURS_NOTE_DESC"
+			>
+				<fieldset
+					name="Excepmethod1title"
+					label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD1_LABEL"
+					description="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD1_DESC"
+				>
+					<field
+						name="1"
+						type="pro"
+						label="MOD_OPENINGHOURS_EXCEP_HOURS_LABEL"
+					/>
+				</fieldset>
+
+				<fieldset
+						name="Excepmethod2title"
+						label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD2_LABEL"
+						description="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD2_DESC"
+				>
+					<field
+						name="2"
+						type="pro"
+						label="MOD_OPENINGHOURS_EXCEP_HOURS_LABEL"
+					/>
+				</fieldset>
+
+				<fieldset
+						name="Excepmethod3title"
+						label="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD3_LABEL"
+						description="MOD_OPENINGHOURS_EXCEP_HOURS_METHOD3_DESC"
+				>
+					<field
+						name="3"
+						type="pro"
+						label="MOD_OPENINGHOURS_EXCEP_HOURS_LABEL"
+					/>
+				</fieldset>
+			</fieldset>
+
+			<fieldset
+				name="Display"
+				label="MOD_OPENINGHOURS_DISPLAY_LABEL"
+			>
+				<fieldset
+					name="Displaychild"
+					label="MOD_OPENINGHOURS_DISPLAY_LABEL"
+				>
+					<field
+						name="Width"
+						type="text"
+						default="100%"
+						label="MOD_OPENINGHOURS_DISPLAY_WIDTH_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_WIDTH_DESC"
+					/>
+					<field
+						name="Dayalign"
+						type="radio"
+						class="btn-group"
+						default="left"
+						label="MOD_OPENINGHOURS_DISPLAY_DAYALIGN_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_ALIGN_DESC"
+						>
+						<option value="left">MOD_OPENINGHOURS_LEFT</option>
+						<option value="center">MOD_OPENINGHOURS_CENTER</option>
+						<option value="right">MOD_OPENINGHOURS_RIGHT</option>
+					</field>
+				</fieldset>
+
+				<fieldset
+					name="Displaydate"
+					label="MOD_OPENINGHOURS_DISPLAY_DATETIME_LABEL"
+				>
+					<field name="Weekstart" type="radio" class="btn-group" default="2" label="MOD_OPENINGHOURS_DISPLAY_WEEKSTART_LABEL" description="MOD_OPENINGHOURS_DISPLAY_WEEKSTART_DESC" >
+						<option value="3">SATURDAY</option>
+						<option value="1">SUNDAY</option>
+						<option value="2">MONDAY</option>
+					</field>
+					<field
+						name="Weekstart"
+						type="radio"
+						class="btn-group"
+						default="2"
+						label="MOD_OPENINGHOURS_DISPLAY_WEEKSTART_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_WEEKSTART_DESC"
+						>
+						<option value="3">SATURDAY</option>
+						<option value="1">SUNDAY</option>
+						<option value="2">MONDAY</option>
+					</field>
+					<field
+						name="next7days"
+						type="pro"
+						label="MOD_OPENINGHOURS_NEXT7DAYS"
+					/>
+					<field name="Onlytoday"
+					   type="pro"
+					   label="MOD_OPENINGHOURS_DISPLAY_ONLYTODAY_LABEL"
+					   description="MOD_OPENINGHOURS_DISPLAY_ONLYTODAY_DESC"
+					/>
+					<field
+						name="Monfri"
+						type="pro"
+						label="MOD_OPENINGHOURS_DISPLAY_MONFRI_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_MONFRI_DESC"
+					/>
+					<field
+						name="Viewdates"
+						type="pro"
+						label="MOD_OPENINGHOURS_DISPLAY_DATES_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_DATES_DESC"
+					/>
+					<field
+						name="Datetime"
+						type="note"
+						description="MOD_OPENINGHOURS_DISPLAY_DATETIMEFORMAT_DESC"
+					/>
+					<field
+						name="Dateformat"
+						type="pro"
+						label="MOD_OPENINGHOURS_DISPLAY_DATEFORMAT_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_DATEFORMAT_DESC"
+					/>
+					<field
+						name="Timeformat"
+						type="text"
+						default="H:i"
+						label="MOD_OPENINGHOURS_DISPLAY_TIMEFORMAT_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_TIMEFORMAT_DESC"
+					/>
+					<field
+						name="Timezone"
+						type="timezone"
+						default="0"
+						label="MOD_OPENINGHOURS_DISPLAY_TIMEZONE_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_TIMEZONE_DESC"
+					/>
+				</fieldset>
+
+				<fieldset
+					name="Displayfonts"
+					label="MOD_OPENINGHOURS_DISPLAY_FONTS_LABEL"
+				>
+					<field
+						name="Font"
+						type="pro"
+						label="MOD_OPENINGHOURS_DISPLAY_FONT_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_FONT_DESC"
+					/>
+					<field
+						name="Fontsize"
+						type="pro"
+						label="MOD_OPENINGHOURS_DISPLAY_FONTSIZE_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_FONTSIZE_DESC"
+					/>
+				</fieldset>
+
+				<fieldset
+					name="Displayhighlight"
+					label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTS_LABEL"
+				>
+					<field
+						name="Highlight"
+						type="radio"
+						class="btn-group"
+						default="1"
+						label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHT_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHT_DESC"
+						>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field
+						name="Highlightcolor"
+						type="pro"
+						label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTCOLOR_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTCOLOR_DESC"
+					/>
+					<field
+						name="Highlightbold"
+						type="pro"
+						label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTBOLD_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTBOLD_DESC"
+					/>
+					<field
+						name="Highlightitalic"
+						type="pro"
+						label="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTITALIC_LABEL"
+						description="MOD_OPENINGHOURS_DISPLAY_HIGHLIGHTITALIC_DESC"
+					/>
+				</fieldset>
+			</fieldset>
+
+			<fieldset
+				name="note"
+				label="MOD_OPENINGHOURS_DISPLAY_NOTES_LABEL"
+			>
+				<field
+					name="Viewnotes"
+					type="pro"
+					label="MOD_OPENINGHOURS_DISPLAY_VIEWNOTES_LABEL"
+				/>
+			</fieldset>
+
+			<fieldset
+				name="open"
+				label="MOD_OPENINGHOURS_CURRENTLY_OPEN_LABEL"
+			>
+				<field
+					name="Showopen"
+					type="pro"
+					label="MOD_OPENINGHOURS_SHOW_CURRENTLY_OPEN_LABEL"
+					description="MOD_OPENINGHOURS_SHOW_CURRENTLY_OPEN_DESC"
+				/>
+				<field
+					name="Showclosed"
+					type="pro"
+					label="MOD_OPENINGHOURS_SHOW_CURRENTLY_CLOSED_LABEL"
+					description="MOD_OPENINGHOURS_SHOW_CURRENTLY_CLOSED_DESC"
+				/>
+			</fieldset>
+
+			<fieldset
+				name="Microdata"
+				label="MOD_OPENINGHOURS_MICRODATA_LABEL"
+			>
+				<field
+					name="Usemicro"
+					type="pro"
+					label="MOD_OPENINGHOURS_USE_MICRODATA_LABEL"
+					description="MOD_OPENINGHOURS_USE_MICRODATA_DESC"
+				/>
+
+			</fieldset>
+
+			<fieldset
+				name="advanced"
+			>
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+				<field
+					name="Debug"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_OPENINGHOURS_DEBUG_LABEL"
+					description="MOD_OPENINGHOURS_DEBUG_DESC"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
 	</config>
 	
 	<!-- Scripts to run on installation -->
 	<scriptfile>script.php</scriptfile>
  
-<updateservers>		
-<server type="extension" priority="1" name="Opening Hours Update"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_rdsubs&view=updater&format=xml&cat=1]]></server>	
-</updateservers>
+	<updateservers>
+	<server type="extension" priority="1" name="Opening Hours"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_rdsubs&view=updater&format=xml&cat=1]]></server>
+	</updateservers>
 
 </extension>
