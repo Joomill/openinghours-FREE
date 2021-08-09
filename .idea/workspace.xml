@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/openinghours-free.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Joomla Opening Hours module - FREE Version.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/Joomill.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/xtextAutoBuilderState.xml" beforeDir="false" />
+    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="V4.0.0 - PHPStorm">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod_openinghours.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mod_openinghours.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="ComposerSettings">
     <execution />
@@ -48,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../joomla4-free/configuration.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../joomla4-free/modules" />
     <property name="settings.editor.selected.configurable" value="copyright" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -60,8 +55,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628546495034</updated>
-      <workItem from="1628546496275" duration="121000" />
+      <workItem from="1628546496275" duration="2537000" />
     </task>
+    <task id="LOCAL-00001" summary="V4.0.0 - PHPStorm">
+      <created>1628547103245</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1628547103245</updated>
+    </task>
+    <task id="LOCAL-00002" summary="V4.0.0 - Changed languagefiles to be compatible with Joomla 4">
+      <created>1628547144072</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628547144072</updated>
+    </task>
+    <task id="LOCAL-00003" summary="V4.0.0 - Added Joomla 4 as minimum version andUninstall installer plugin on update">
+      <created>1628547159535</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628547159535</updated>
+    </task>
+    <task id="LOCAL-00004" summary="V4.0.0 - Update Copyrights">
+      <created>1628547221140</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628547221140</updated>
+    </task>
+    <task id="LOCAL-00005" summary="V4.0.0 - PHPStorm">
+      <created>1628547233933</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1628547233933</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,5 +111,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="V4.0.0 - Changed languagefiles to be compatible with Joomla 4" />
+    <MESSAGE value="V4.0.0 - Added Joomla 4 as minimum version andUninstall installer plugin on update" />
+    <MESSAGE value="V4.0.0 - Update Copyrights" />
+    <MESSAGE value="V4.0.0 - PHPStorm" />
+    <option name="LAST_COMMIT_MESSAGE" value="V4.0.0 - PHPStorm" />
   </component>
 </project>
