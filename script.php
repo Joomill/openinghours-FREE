@@ -1,56 +1,92 @@
 <?php
-/**
+/*
  *  package: Joomla Opening Hours module - FREE Version
- *  copyright: Copyright (c) 2020. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2021. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 3 or later
  *  link: https://www.joomill-extensions.com
  */
 
+use Joomla\CMS\Table\Table;
+use Joomla\CMS\Plugin\PluginHelper;
+
 // No direct access.
 defined('_JEXEC') or die;
-
-use Joomla\CMS\Language\Text;
 
 /**
  * Load the Joomill Opening Hours installer
  */
-class mod_openinghoursInstallerScript {
 
-	/**
-	 * Method to run before an install/update/uninstall method
-	 *
-	 * @param   string  $type    The type of change (install, update or discover_install).
-	 * @param   object  $parent  The class calling this method.
-	 *
-	 * @return  bool  True on success | False on failure
-	 */
-	public function preflight($type, $parent)
-	{
-		// $parent is the class calling this method
-		// $type is the type of change (install, update or discover_install)
+class mod_openinghoursInstallerScript
+{
+    /**
+     * Minimum Joomla version to check
+     *
+     * @var    string
+     * @since  4.0.0
+     */
+    private $minimumJoomlaVersion = '4.0';
 
-		// Check if the Joomla version is correct
-		$version = new JVersion;
+    /**
+     * Minimum PHP version to check
+     *
+     * @var    string
+     * @since  4.0.0
+     */
+    private $minimumPHPVersion = JOOMLA_MINIMUM_PHP;
 
-		if (version_compare($version->getShortVersion(), '3.0', '<') == '-1')
-		{
-			$app = JFactory::getApplication();
-			$app->enqueueMessage(Text::sprintf('You are running Joomla version %s, This version requires at least Joomla version 3.0. Installation cannot continue. Go to our website and download the latest Joomla 2.5 release.', $version->getShortVersion()), 'error');
 
-			return false;
-		}
+    /**
+     * Function called before extension installation/update/removal procedure commences
+     *
+     * @param string $type The type of change (install, update or discover_install, not uninstall)
+     * @param InstallerAdapter $parent The class calling this method
+     * @return  boolean  True on success
+     * @throws Exception
+     * @since  4.0.0
+     */
+    public function preflight($type, $parent): bool
+    {
+        if ($type !== 'uninstall')
+        {
+            // Check for the minimum PHP version before continuing
+            if (!empty($this->minimumPHPVersion) && version_compare(PHP_VERSION, $this->minimumPHPVersion, '<'))
+            {
+                Log::add(
+                    Text::sprintf('JLIB_INSTALLER_MINIMUM_PHP', $this->minimumPHPVersion),
+                    Log::WARNING,
+                    'jerror'
+                );
+                return false;
+            }
+            // Check for the minimum Joomla version before continuing
+            if (!empty($this->minimumJoomlaVersion) && version_compare(JVERSION, $this->minimumJoomlaVersion, '<'))
+            {
+                Log::add(
+                    Text::sprintf('JLIB_INSTALLER_MINIMUM_JOOMLA', $this->minimumJoomlaVersion),
+                    Log::WARNING,
+                    'jerror'
+                );
+                return false;
+            }
+        }
+        return true;
+    }
 
-		// Check if the PHP version is correct
-		if (version_compare(phpversion(), '5.3', '<') == '-1')
-		{
-			$app = JFactory::getApplication();
-			$app->enqueueMessage(Text::sprintf('You are running PHP version %s, The Opening Hours module requires at least PHP version 5.3. Installation cannot continue. You can still use Opening Hours v3.2.1 on this server.', phpversion()), 'error');
+    public function postflight($type, $parent) {
+        $this->installUpdatePlugin($parent);
+    }
 
-			return false;
-		}
-
-		return true;
-	}
+    private function installUpdatePlugin($parent) {
+        $extension = Table::getInstance('extension');
+        $plugin = PluginHelper::getPlugin('installer', 'openinghours');
+        if ($plugin) {
+            $inst = new JInstaller();
+            $inst->uninstall('plugin', $plugin->id);
+        }
+    }
 
 }
+
+
+
 
