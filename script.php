@@ -6,8 +6,11 @@
  *  link: https://www.joomill-extensions.com
  */
 
-use Joomla\CMS\Table\Table;
+use Joomla\CMS\Installer\InstallerAdapter;
+use Joomla\CMS\Language\Text;
+use Joomla\CMS\Log\Log;
 use Joomla\CMS\Plugin\PluginHelper;
+use Joomla\CMS\Table\Table;
 
 // No direct access.
 defined('_JEXEC') or die;
@@ -15,7 +18,6 @@ defined('_JEXEC') or die;
 /**
  * Load the Joomill Opening Hours installer
  */
-
 class mod_openinghoursInstallerScript
 {
     /**
@@ -46,11 +48,9 @@ class mod_openinghoursInstallerScript
      */
     public function preflight($type, $parent): bool
     {
-        if ($type !== 'uninstall')
-        {
+        if ($type !== 'uninstall') {
             // Check for the minimum PHP version before continuing
-            if (!empty($this->minimumPHPVersion) && version_compare(PHP_VERSION, $this->minimumPHPVersion, '<'))
-            {
+            if (!empty($this->minimumPHPVersion) && version_compare(PHP_VERSION, $this->minimumPHPVersion, '<')) {
                 Log::add(
                     Text::sprintf('JLIB_INSTALLER_MINIMUM_PHP', $this->minimumPHPVersion),
                     Log::WARNING,
@@ -59,8 +59,7 @@ class mod_openinghoursInstallerScript
                 return false;
             }
             // Check for the minimum Joomla version before continuing
-            if (!empty($this->minimumJoomlaVersion) && version_compare(JVERSION, $this->minimumJoomlaVersion, '<'))
-            {
+            if (!empty($this->minimumJoomlaVersion) && version_compare(JVERSION, $this->minimumJoomlaVersion, '<')) {
                 Log::add(
                     Text::sprintf('JLIB_INSTALLER_MINIMUM_JOOMLA', $this->minimumJoomlaVersion),
                     Log::WARNING,
@@ -72,11 +71,13 @@ class mod_openinghoursInstallerScript
         return true;
     }
 
-    public function postflight($type, $parent) {
+    public function postflight($type, $parent)
+    {
         $this->installUpdatePlugin($parent);
     }
 
-    private function installUpdatePlugin($parent) {
+    private function installUpdatePlugin($parent)
+    {
         $extension = Table::getInstance('extension');
         $plugin = PluginHelper::getPlugin('installer', 'openinghours');
         if ($plugin) {

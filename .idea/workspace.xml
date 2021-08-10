@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="V4.0.0 - PHPStorm">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
+    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="V4.0.0 - Added Social Media Links">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mod_openinghours.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mod_openinghours.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.php" beforeDir="false" afterPath="$PROJECT_DIR$/script.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../joomla4-free/modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="copyright.profiles" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -58,7 +56,10 @@
       <option name="presentableId" value="Default" />
       <updated>1628546495034</updated>
       <workItem from="1628546496275" duration="7663000" />
-      <workItem from="1628596867694" duration="645000" />
+      <workItem from="1628596867694" duration="683000" />
+      <workItem from="1628604694327" duration="639000" />
+      <workItem from="1628616196801" duration="60000" />
+      <workItem from="1628616335993" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="V4.0.0 - PHPStorm">
       <created>1628547103245</created>
@@ -130,7 +131,28 @@
       <option name="project" value="LOCAL" />
       <updated>1628587964193</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="V4.0.0 - FREE">
+      <created>1628598122059</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1628598122059</updated>
+    </task>
+    <task id="LOCAL-00012" summary="V4.0.0 - Added Social Media Links">
+      <created>1628605231014</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1628605231014</updated>
+    </task>
+    <task id="LOCAL-00013" summary="V4.0.0 - Added Social Media Links">
+      <created>1628605335982</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1628605335982</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +178,8 @@
     <MESSAGE value="V4.0.0 - Optimized: Configuration fields for Joomla 4" />
     <MESSAGE value="V4.0.0 - Release" />
     <MESSAGE value="V4.0.0 - PHPStorm" />
-    <option name="LAST_COMMIT_MESSAGE" value="V4.0.0 - PHPStorm" />
+    <MESSAGE value="V4.0.0 - FREE" />
+    <MESSAGE value="V4.0.0 - Added Social Media Links" />
+    <option name="LAST_COMMIT_MESSAGE" value="V4.0.0 - Added Social Media Links" />
   </component>
 </project>
