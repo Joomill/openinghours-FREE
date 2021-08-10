@@ -374,6 +374,6 @@
 	<scriptfile>script.php</scriptfile>
  
 	<updateservers>
-	<server type="extension" priority="1" name="Opening Hours"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_rdsubs&view=updater&format=xml&cat=1]]></server>
+	<server type="extension" priority="1" name="Opening Hours FREE"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_rdsubs&view=updater&format=xml&cat=1]]></server>
 	</updateservers>
 </extension>
