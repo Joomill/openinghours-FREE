@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="V4.0.0 - PHPStorm">
+    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="V4.0.0 - Release">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mod_openinghours.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mod_openinghours.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628546495034</updated>
-      <workItem from="1628546496275" duration="2537000" />
+      <workItem from="1628546496275" duration="6132000" />
     </task>
     <task id="LOCAL-00001" summary="V4.0.0 - PHPStorm">
       <created>1628547103245</created>
@@ -92,7 +91,28 @@
       <option name="project" value="LOCAL" />
       <updated>1628547233933</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="V4.0.0 - PHPStorm">
+      <created>1628549393647</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1628549393647</updated>
+    </task>
+    <task id="LOCAL-00007" summary="V4.0.0 - Optimized: Configuration fields for Joomla 4">
+      <created>1628549404069</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628549404069</updated>
+    </task>
+    <task id="LOCAL-00008" summary="V4.0.0 - Release">
+      <created>1628581409580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1628581409580</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +135,8 @@
     <MESSAGE value="V4.0.0 - Added Joomla 4 as minimum version andUninstall installer plugin on update" />
     <MESSAGE value="V4.0.0 - Update Copyrights" />
     <MESSAGE value="V4.0.0 - PHPStorm" />
-    <option name="LAST_COMMIT_MESSAGE" value="V4.0.0 - PHPStorm" />
+    <MESSAGE value="V4.0.0 - Optimized: Configuration fields for Joomla 4" />
+    <MESSAGE value="V4.0.0 - Release" />
+    <option name="LAST_COMMIT_MESSAGE" value="V4.0.0 - Release" />
   </component>
 </project>
