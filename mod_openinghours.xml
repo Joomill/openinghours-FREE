@@ -354,7 +354,6 @@
 					type="textarea"
 					rows="3"
 					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
 				/>
 				<field
 					name="Debug"
@@ -377,5 +376,4 @@
 	<updateservers>
 	<server type="extension" priority="1" name="Opening Hours"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_rdsubs&view=updater&format=xml&cat=1]]></server>
 	</updateservers>
-
 </extension>
