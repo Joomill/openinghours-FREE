@@ -19,7 +19,6 @@ $document->addStylesheet('modules/mod_openinghours/tmpl/style.css');
 $timezone = $params->get('Timezone');
 $now = new DateTime(NULL ?? 'now', new DateTimeZone($timezone));
 $today = $now->format('l');
-$todayformat = $now ->format($params->get('Dateformat'));
 $weekday = $now->format('w');
 $localtime = $now->format('H:i');
 

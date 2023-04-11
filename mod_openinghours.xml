@@ -243,6 +243,7 @@
 					<field
 						name="Dateformat"
 						type="pro"
+						default="d-m-Y"
 						label="MOD_OPENINGHOURS_DISPLAY_DATEFORMAT_LABEL"
 						description="MOD_OPENINGHOURS_DISPLAY_DATEFORMAT_DESC"
 					/>
