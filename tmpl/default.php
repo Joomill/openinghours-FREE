@@ -1,7 +1,7 @@
 <?php
 /*
  *  package: Joomla Opening Hours module - FREE Version
- *  copyright: Copyright (c) 2021. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2023. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 3 or later
  *  link: https://www.joomill-extensions.com
  */
@@ -17,7 +17,7 @@ $document->addStylesheet('modules/mod_openinghours/tmpl/style.css');
 
 // Get days for this week
 $timezone = $params->get('Timezone');
-$now = new DateTime(NULL, new DateTimeZone($timezone));
+$now = new DateTime(NULL ?? 'now', new DateTimeZone($timezone));
 $today = $now->format('l');
 $todayformat = $now ->format($params->get('Dateformat'));
 $weekday = $now->format('w');
@@ -71,7 +71,7 @@ $msg2='CLOSED';
 	<div class="openinghours-notes"<?php echo $params->get('Notes'); ?></div>
 <?php }; ?>
 
-<div itemscope itemtype="http://schema.org/LocalBusiness" class="openinghours" font-family: <?php echo $params->get('Font'); ?>; font-size: <?php echo $params->get('Fontsize'); ?>;">
+<div itemscope itemtype="https://schema.org/LocalBusiness" class="openinghours" font-family: <?php echo $params->get('Font'); ?>; font-size: <?php echo $params->get('Fontsize'); ?>;">
 
 <?php
 // For each Day	
@@ -81,8 +81,8 @@ $msg2='CLOSED';
 		$microdate = substr($day, 0, 2);
         $time1  = $day . 'times1' ;		
 		$time2  = $day . 'times2' ;
-		$microtime1 = str_replace(" ", "", $params->get( $time1 )); 
-		$microtime2 = str_replace(" ", "", $params->get( $time2 ));
+$microtime1 = str_replace(" ", "", $params->get( $time1 )  ?? '');
+$microtime2 = str_replace(" ", "", $params->get( $time2 )  ?? '');
 
 // Add format for Regular openinghours
 		if (strpos($microtime1,'-') !== false) {
@@ -152,5 +152,5 @@ $msg2='CLOSED';
 	<?php echo 'Timezone:'.$timezone; ?><br/>
     <?php } endif; ?>
 
-	<div style="font-size:9px; padding: 5px 10px 5px 0; text-align:center"><a href="http://www.joomill-extensions.com/" rel="nofollow" target="_blank">Opening Hours module by: Joomill</a></div>
+	<div style="font-size:9px; padding: 5px 10px 5px 0; text-align:center"><a href="https://www.joomill-extensions.com/" rel="nofollow" target="_blank">Opening Hours module by: Joomill</a></div>
 </div>

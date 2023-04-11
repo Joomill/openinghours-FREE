@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="V4.0.0 - Added Social Media Links">
+    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="V4.0.0 - Show Error when install is not minimum PHP or Joomla version">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.php" beforeDir="false" afterPath="$PROJECT_DIR$/script.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod_openinghours.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mod_openinghours.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpl/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/tmpl/default.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +31,10 @@
     <joomlaConfigPath>D:\wamp64\www\dev\joomla4-free\configuration.php</joomlaConfigPath>
     <joomlaPath>D:\wamp64\www\dev\joomla4-free</joomlaPath>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\wamp64\bin\php\php8.1.0\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/../../joomla4-free" />
     </include_path>
@@ -38,15 +47,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="copyright.profiles" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/wamp64/www/dev/joomla4/modules/mod_openinghours",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,6 +73,11 @@
       <workItem from="1628604694327" duration="639000" />
       <workItem from="1628616196801" duration="60000" />
       <workItem from="1628616335993" duration="7000" />
+      <workItem from="1628622757754" duration="75000" />
+      <workItem from="1641683611796" duration="315000" />
+      <workItem from="1641684202999" duration="22000" />
+      <workItem from="1681241225104" duration="116000" />
+      <workItem from="1681245948491" duration="642000" />
     </task>
     <task id="LOCAL-00001" summary="V4.0.0 - PHPStorm">
       <created>1628547103245</created>
@@ -152,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628605335982</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="V4.0.0 - Show Error when install is not minimum PHP or Joomla version">
+      <created>1628622823612</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1628622823612</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +193,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -180,6 +204,7 @@
     <MESSAGE value="V4.0.0 - PHPStorm" />
     <MESSAGE value="V4.0.0 - FREE" />
     <MESSAGE value="V4.0.0 - Added Social Media Links" />
-    <option name="LAST_COMMIT_MESSAGE" value="V4.0.0 - Added Social Media Links" />
+    <MESSAGE value="V4.0.0 - Show Error when install is not minimum PHP or Joomla version" />
+    <option name="LAST_COMMIT_MESSAGE" value="V4.0.0 - Show Error when install is not minimum PHP or Joomla version" />
   </component>
 </project>
