@@ -10,8 +10,11 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Language\Text;
+use Joomla\CMS\Form\FormHelper;
 
-class JFormFieldPRO extends JFormField
+FormHelper::loadFieldClass('list');
+
+class JFormFieldPRO extends Joomla\CMS\Form\Field\ListField
 {
 	protected $type = 'pro';
 

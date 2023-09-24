@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="2.5"  client="site" method="upgrade">
 	<name>Opening Hours module</name>
-	<version>4.0.1</version>
-	<creationDate>11-04-2023</creationDate>
+	<version>4.1.0</version>
+	<creationDate>24-09-2023</creationDate>
 	<client>0</client>
 	<author>Joomill</author>
 	<authorEmail>info@joomill-extensions.com</authorEmail>
@@ -19,7 +19,7 @@
 		<br/>
 		<p>
 		Follow me for more information about Joomla and updates for Joomill extensions:<br/>
-		<a href="https://www.twitter.com/Joomill" target="_blank"><i class="fab fa-twitter-square fa-2x" style="color:#1DA1F2;"></i></a>
+		<a href="https://www.x.com/Joomill" target="_blank"><i class="fab fa-twitter-square fa-2x" style="color:#1DA1F2;"></i></a>
 		<a href="https://www.instagram.com/Joomill" target="_blank"><i class="fab fa-instagram-square fa-2x" style="color:#E1306C;"></i></a>
 		<a href="https://www.facebook.com/Joomill" target="_blank"><i class="fab fa-facebook-square fa-2x" style="color:#4267B2;"></i></a>
 		</p>
