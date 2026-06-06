@@ -1,3 +1,11 @@
+Version 6.0.0 [06-06-2026]
+Rebuilt on the modern namespaced module structure (Joomla 4/5/6)
+Added: DI service provider, dispatcher and helper
+Added: highlight colour picker (now free)
+Added: upgrade-to-PRO call to action and feature teasers in all 7 languages
+Fixed: removed the obsolete JInstaller call that crashed on Joomla 5/6
+Fixed: manifest cleaned up and output escaped per Joomla standards
+
 Version 4.0.1 [11-04-2023]
 Fixes issue with PHP errors/warnings on PHP 8.1
 Fixes Changelog and Update URLs
