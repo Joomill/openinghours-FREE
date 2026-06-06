@@ -2,10 +2,8 @@
 
 All notable changes to the FREE Opening Hours module are documented in this file.
 
-## [Unreleased]
-- Addition: Module help button now links to the Joomill documentation page instead of the generic Joomla help
-
 ## [6.1.0] - 06-06-2026
+- Addition: Module help button now links to the Joomill documentation page instead of the generic Joomla help
 - Addition: Rebuilt on the modern namespaced module structure (Joomla 4/5/6) with DI service provider, dispatcher and helper
 - Addition: Highlight colour picker (now available in the free version)
 - Addition: Upgrade-to-PRO call to action and PRO feature teasers in the module options

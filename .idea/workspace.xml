@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="V4.1.0 - Compatible with J5">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="Update workspace configuration for V4.1.0 compatibility with Joomla 5" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,7 +180,7 @@
       <workItem from="1696253409476" duration="164000" />
       <workItem from="1780729690678" duration="3113000" />
       <workItem from="1780738488672" duration="5000" />
-      <workItem from="1780749600044" duration="4741000" />
+      <workItem from="1780749600044" duration="4768000" />
     </task>
     <task id="LOCAL-00001" summary="V4.0.0 - PHPStorm">
       <created>1628547103245</created>
@@ -304,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695579500424</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update workspace configuration for V4.1.0 compatibility with Joomla 5">
+      <option name="closed" value="true" />
+      <created>1780754828609</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1780754828610</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +340,7 @@
     <MESSAGE value="V4.0.0 - Show Error when install is not minimum PHP or Joomla version" />
     <MESSAGE value="V4.0.1 - Fixes issue with PHP errors/warnings on PHP 8.1 &amp; Fixes Changelog and Update URLs" />
     <MESSAGE value="V4.1.0 - Compatible with J5" />
-    <option name="LAST_COMMIT_MESSAGE" value="V4.1.0 - Compatible with J5" />
+    <MESSAGE value="Update workspace configuration for V4.1.0 compatibility with Joomla 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace configuration for V4.1.0 compatibility with Joomla 5" />
   </component>
 </project>
