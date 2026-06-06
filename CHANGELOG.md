@@ -2,7 +2,7 @@
 
 All notable changes to the FREE Opening Hours module are documented in this file.
 
-## [6.0.0] - 06-06-2026
+## [6.1.0] - 06-06-2026
 - Addition: Rebuilt on the modern namespaced module structure (Joomla 4/5/6) with DI service provider, dispatcher and helper
 - Addition: Highlight colour picker (now available in the free version)
 - Addition: Upgrade-to-PRO call to action and PRO feature teasers in the module options
