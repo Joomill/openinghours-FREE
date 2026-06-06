@@ -34,7 +34,7 @@ $week = OpeninghoursHelper::getWeek($params);
 		<?php require ModuleHelper::getLayoutPath('mod_openinghours', $params->get('layout', 'default') . '_microdata'); ?>
 	<?php endif; ?>
 
-    <div class="openinghours-footer" style="font-size:9px; padding: 5px 10px 5px 0; text-align:center">
+    <div style="font-size:9px; padding: 5px 10px 5px 0; text-align:center">
         <a href="https://www.joomill-extensions.com/extensions/opening-hours-days-week-closings" rel="nofollow" target="_blank"><?php echo Text::_('MOD_OPENINGHOURS_FOOTER_CREDIT'); ?></a>
     </div>
 
