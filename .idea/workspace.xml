@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="V4.0.1 - Fixes issue with PHP errors/warnings on PHP 8.1 &amp; Fixes Changelog and Update URLs">
+    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="V4.1.0 - Compatible with J5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +20,25 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="36" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JeroenMoolenschot&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Joomill/openinghours-FREE.git&quot;,
+    &quot;accountId&quot;: &quot;31ce2f7c-b2e1-43fa-821d-d7dd39967deb&quot;
+  }
+}</component>
   <component name="JoomlaConfiguration" enabled="true">
     <joomlaConfigPath>D:\wamp64\www\dev\joomla4-free\configuration.php</joomlaConfigPath>
     <joomlaPath>D:\wamp64\www\dev\joomla4-free</joomlaPath>
@@ -30,11 +46,78 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\wamp64\bin\php\php8.1.0\php.exe">
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.000000000000111" />
+      <entry key="M2" value="1.0000003369673305" />
+      <entry key="M5" value="1.002989913030611" />
+      <entry key="M10" value="1.071257573537177" />
+      <entry key="M15" value="1.212061885892324" />
+      <entry key="M30" value="1.64416180636181" />
+      <entry key="H1" value="2.1318828297295926" />
+      <entry key="H2" value="2.503527917272095" />
+      <entry key="H4" value="2.733782413298845" />
+      <entry key="D1" value="2.9529007922069104" />
+      <entry key="W1" value="2.993201437294891" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.16724094434826398" />
+      <entry key="MS500" value="0.6993080413692306" />
+      <entry key="S2" value="0.9144650894999015" />
+      <entry key="S5" value="0.9648656650679005" />
+      <entry key="S10" value="0.9822757581595407" />
+      <entry key="S30" value="0.9940566661484671" />
+      <entry key="S60" value="0.9970239045021375" />
+      <entry key="M2" value="0.9985111794292698" />
+      <entry key="M5" value="1.0023904315562917" />
+      <entry key="M10" value="1.0709170009698432" />
+      <entry key="M15" value="1.2117785571942061" />
+      <entry key="M30" value="1.643933568512319" />
+      <entry key="H1" value="2.1317197643086994" />
+      <entry key="H2" value="2.503427718174746" />
+      <entry key="H4" value="2.733726528525369" />
+      <entry key="D1" value="2.9528905602309665" />
+      <entry key="W1" value="2.993199951464227" />
+    </decayedShown>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Laragon PHP">
     <include_path>
       <path value="$PROJECT_DIR$/../../joomla4-free" />
     </include_path>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="1wVb2P9XyDTN4rVAyPJ7QG540Qn" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -45,19 +128,35 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/wamp64/www/dev/joomla4/modules/mod_openinghours&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.25134.104" />
+        <option value="bundled-php-predefined-a98d8de5180a-6bbb74dbab74-com.jetbrains.php.sharedIndexes-PS-261.25134.104" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -79,6 +178,11 @@
       <workItem from="1681247468037" duration="666000" />
       <workItem from="1681248155860" duration="983000" />
       <workItem from="1681249778798" duration="20000" />
+      <workItem from="1695579429743" duration="1124000" />
+      <workItem from="1696253409476" duration="164000" />
+      <workItem from="1780729690678" duration="3113000" />
+      <workItem from="1780738488672" duration="5000" />
+      <workItem from="1780749600044" duration="4741000" />
     </task>
     <task id="LOCAL-00001" summary="V4.0.0 - PHPStorm">
       <created>1628547103245</created>
@@ -192,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1681248162905</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="V4.1.0 - Compatible with J5">
+      <option name="closed" value="true" />
+      <created>1695579500424</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1695579500424</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +333,7 @@
     <MESSAGE value="V4.0.0 - Added Social Media Links" />
     <MESSAGE value="V4.0.0 - Show Error when install is not minimum PHP or Joomla version" />
     <MESSAGE value="V4.0.1 - Fixes issue with PHP errors/warnings on PHP 8.1 &amp; Fixes Changelog and Update URLs" />
-    <option name="LAST_COMMIT_MESSAGE" value="V4.0.1 - Fixes issue with PHP errors/warnings on PHP 8.1 &amp; Fixes Changelog and Update URLs" />
+    <MESSAGE value="V4.1.0 - Compatible with J5" />
+    <option name="LAST_COMMIT_MESSAGE" value="V4.1.0 - Compatible with J5" />
   </component>
 </project>
