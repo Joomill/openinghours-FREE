@@ -246,6 +246,9 @@
         </fields>
     </config>
 
+    <!-- Help button URL -->
+    <help key="" url="MOD_OPENINGHOURS_HELP_URL" />
+
     <!-- Update servers -->
     <changelogurl>
         <![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=changelog&amp;format=xml&amp;cat=1]]>
