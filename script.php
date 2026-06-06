@@ -90,14 +90,6 @@ class mod_openinghoursInstallerScript
 			echo '<div class="mb-3 text-center"><strong>' . Text::_('MOD_OPENINGHOURS_XML_DESCRIPTION') . '</strong></div>';
 			echo '<div class="mb-3 text-center">' . Text::_('MOD_OPENINGHOURS_THANKYOU') . '</div>';
 
-			// Upgrade to PRO call to action
-			echo '<div class="card border-success mb-3">';
-			echo '<div class="card-header bg-success text-white"><strong>' . Text::_('MOD_OPENINGHOURS_UPGRADE_PRO') . '</strong></div>';
-			echo '<div class="card-body">';
-			echo '<p>' . Text::_('MOD_OPENINGHOURS_UPGRADE_PRO_TEXT') . '</p>';
-			echo '<a class="btn btn-success" href="https://www.joomill-extensions.com/extensions/opening-hours-days-week-closings" target="_blank">' . Text::_('MOD_OPENINGHOURS_UPGRADE_PRO_BUTTON') . '</a>';
-			echo '</div></div>';
-
 			echo '<h3>' . Text::_('MOD_OPENINGHOURS_INSTALL_QUICKSTART') . ':</h3>';
 			echo '<ul>';
 			echo '<li><a style="text-decoration: underline;" href="index.php?option=com_modules&view=modules&client_id=0&filter[module]=mod_openinghours" target="_blank">' . Text::_('MOD_OPENINGHOURS_INSTALL_CONFIGURATION') . '</a></li>';

@@ -231,6 +231,17 @@
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
+                <field
+                        name="Footer"
+                        type="radio"
+                        class="btn-group"
+                        default="1"
+                        label="MOD_OPENINGHOURS_BASIC_FOOTER_LABEL"
+                        description="MOD_OPENINGHOURS_BASIC_FOOTER_DESC"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
             </fieldset>
         </fields>
     </config>

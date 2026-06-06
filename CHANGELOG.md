@@ -8,7 +8,10 @@ All notable changes to the FREE Opening Hours module are documented in this file
 - Addition: Upgrade-to-PRO call to action and PRO feature teasers in the module options
 - Security: Escape admin-provided parameter values in the module output
 - Language: Added upgrade and teaser strings in all 7 languages (de, en, es, fi, fr, it, nl)
+- Language: Added the missing Font and Font Size labels and descriptions in all 7 languages
 - Change: Manifest rebuilt to the Joomill standard and styling loaded through the WebAssetManager
+- Change: Moved the "Show Footer?" option to the Advanced tab (on by default, can be turned off)
+- Fix: Hide the template's external-link icon on the credit link and PRO upgrade badges
 - Fix: Removed the obsolete JInstaller call that crashed on Joomla 5/6
 - Remove: Legacy flat entry point, in-template stylesheet and elements/ field
 

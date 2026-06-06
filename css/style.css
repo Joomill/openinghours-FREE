@@ -29,3 +29,9 @@
 .openinghours-microdata {
     display: none;
 }
+
+/* Suppress the template's external-link icon on the credit link */
+.openinghours-credit a[target="_blank"]::after,
+.openinghours-credit a[target="_blank"]::before {
+    content: none !important;
+}

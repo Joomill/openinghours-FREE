@@ -8,6 +8,7 @@
 
 namespace Joomill\Module\Openinghours\Site\Field;
 
+use Joomla\CMS\Factory;
 use Joomla\CMS\Form\FormField;
 use Joomla\CMS\Language\Text;
 
@@ -35,6 +36,14 @@ class ProField extends FormField
 	protected $type = 'Pro';
 
 	/**
+	 * Whether the icon-suppressing style has already been added to the document.
+	 *
+	 * @var    boolean
+	 * @since  6.1.0
+	 */
+	protected static $styleLoaded = false;
+
+	/**
 	 * Returns the field input markup: a badge linking to the PRO upgrade page.
 	 *
 	 * @return  string  The field input markup.
@@ -43,10 +52,32 @@ class ProField extends FormField
 	 */
 	protected function getInput()
 	{
-		return '<a class="btn btn-success btn-sm" href="https://www.joomill-extensions.com/extensions/opening-hours-days-week-closings"'
+		$this->loadStyle();
+
+		return '<a class="btn btn-success btn-sm openinghours-pro-badge" href="https://www.joomill-extensions.com/extensions/opening-hours-days-week-closings"'
 			. ' target="_blank" rel="noopener noreferrer">'
 			. '<span class="icon-star icon-white" aria-hidden="true"></span> '
 			. Text::_('MOD_OPENINGHOURS_PRO_ONLY')
 			. '</a>';
+	}
+
+	/**
+	 * Adds a one-off inline style that hides the admin template's external-link
+	 * icon on the PRO badge, while keeping the link opening in a new tab.
+	 *
+	 * @return  void
+	 *
+	 * @since   6.1.0
+	 */
+	protected function loadStyle(): void
+	{
+		if (self::$styleLoaded) {
+			return;
+		}
+
+		self::$styleLoaded = true;
+
+		Factory::getApplication()->getDocument()->getWebAssetManager()
+			->addInlineStyle('.openinghours-pro-badge[target="_blank"]::before{content:none !important;}');
 	}
 }
