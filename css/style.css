@@ -1,0 +1,31 @@
+/*
+ *  package: Joomla Opening Hours module - FREE Version
+ *  copyright: Copyright (c) 2026. Jeroen Moolenschot | Joomill
+ *  license: GNU General Public License version 3 or later
+ *  link: https://www.joomill-extensions.com
+ */
+
+.openinghours {
+    margin: auto;
+}
+
+.openinghours-eachday {
+    display: inline-block;
+    width: 100%;
+}
+
+.openinghours-day {
+    float: left;
+    width: 48%;
+    overflow: hidden;
+}
+
+.openinghours-time {
+    float: right;
+    width: 48%;
+    overflow: hidden;
+}
+
+.openinghours-microdata {
+    display: none;
+}
