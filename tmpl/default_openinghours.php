@@ -9,8 +9,9 @@
 // No direct access.
 defined('_JEXEC') or die;
 
-use Joomill\Module\Openinghours\Site\Helper\OpeninghoursHelper;
 use Joomla\CMS\Language\Text;
+
+/** @var Joomill\Module\Openinghours\Site\Helper\OpeninghoursHelper $helper */
 
 ?>
 
@@ -24,7 +25,7 @@ use Joomla\CMS\Language\Text;
 			$todayClass = 'style="font-weight:bold; color:' . $highlightColor . ';"';
 		}
 
-		$dayTimes = OpeninghoursHelper::getDayTimes($day, $params);
+		$dayTimes = $helper->getDayTimes($day, $params);
 		$time1 = $dayTimes['time1'];
 		?>
 

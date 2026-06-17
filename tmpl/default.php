@@ -11,19 +11,19 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\Language\Text;
-use Joomill\Module\Openinghours\Site\Helper\OpeninghoursHelper;
 
 /** @var Joomla\CMS\Application\CMSApplication $app */
 /** @var Joomla\Registry\Registry $params */
 /** @var stdClass $module */
+/** @var Joomill\Module\Openinghours\Site\Helper\OpeninghoursHelper $helper */
+/** @var DateTime $now */
+/** @var string $today */
+/** @var array $week */
 
 $wa = $app->getDocument()->getWebAssetManager();
 $wa->registerAndUseStyle('mod_openinghours.style', 'modules/mod_openinghours/css/style.css');
 
 $timezone = $params->get('Timezone');
-$now = OpeninghoursHelper::getCurrentDateTime($params);
-$today = $now->format('l');
-$week = OpeninghoursHelper::getWeek($params);
 ?>
 
 <div style="width:<?php echo htmlspecialchars($params->get('Width'), ENT_QUOTES); ?>; margin: auto;">

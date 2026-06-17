@@ -27,4 +27,33 @@ use Joomla\CMS\Helper\HelperFactoryAwareTrait;
 class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareInterface
 {
 	use HelperFactoryAwareTrait;
+
+	/**
+	 * Returns the layout data for the module.
+	 *
+	 * Resolves the helper from the module's HelperFactory and adds the current
+	 * date/time, the day name and the ordered week so the layouts can render
+	 * without calling the helper directly.
+	 *
+	 * @return  array  The layout data
+	 *
+	 * @since   6.2.0
+	 */
+	protected function getLayoutData(): array
+	{
+		$data = parent::getLayoutData();
+
+		/** @var \Joomill\Module\Openinghours\Site\Helper\OpeninghoursHelper $helper */
+		$helper = $this->getHelperFactory()->getHelper('OpeninghoursHelper');
+		$params = $data['params'];
+
+		$now = $helper->getCurrentDateTime($params);
+
+		$data['helper'] = $helper;
+		$data['now']    = $now;
+		$data['today']  = $now->format('l');
+		$data['week']   = $helper->getWeek($params);
+
+		return $data;
+	}
 }

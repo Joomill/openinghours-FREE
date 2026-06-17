@@ -36,7 +36,7 @@ class OpeninghoursHelper
 	 *
 	 * @since   6.0.0
 	 */
-	public static function getWeek($params)
+	public function getWeek($params)
 	{
 		$week = [];
 
@@ -63,7 +63,7 @@ class OpeninghoursHelper
 	 *
 	 * @since   6.0.0
 	 */
-	public static function getWeekday($params, $now)
+	public function getWeekday($params, $now)
 	{
 		$weekday = (int) $now->format('w');
 
@@ -94,7 +94,7 @@ class OpeninghoursHelper
 	 *
 	 * @since   6.0.0
 	 */
-	public static function formatTime($openinghours, $day, $params)
+	public function formatTime($openinghours, $day, $params)
 	{
 		if (empty($openinghours) || strpos($openinghours, '-') === false) {
 			return Text::_($openinghours);
@@ -130,10 +130,10 @@ class OpeninghoursHelper
 	 *
 	 * @since   6.0.0
 	 */
-	public static function getDayTimes($day, $params)
+	public function getDayTimes($day, $params)
 	{
 		return [
-			'time1' => self::formatTime($params->get($day . 'times1', ''), $day, $params),
+			'time1' => $this->formatTime($params->get($day . 'times1', ''), $day, $params),
 		];
 	}
 
@@ -146,7 +146,7 @@ class OpeninghoursHelper
 	 *
 	 * @since   6.0.0
 	 */
-	public static function getCurrentDateTime($params)
+	public function getCurrentDateTime($params)
 	{
 		return new \DateTime('now', new \DateTimeZone($params->get('Timezone')));
 	}

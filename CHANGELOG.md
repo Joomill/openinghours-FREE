@@ -7,10 +7,11 @@ All notable changes to the FREE Opening Hours module are documented in this file
 
 ## [6.2.0] - UNRELEASED
 - Change: Rebuilt the installer script to the Joomill standard (InstallerScriptInterface, typed signatures, install language safety net and error logging)
+- Change: Helper now resolved through the module HelperFactory with instance methods instead of static calls; layout data prepared in the dispatcher
 
 ## [6.1.0] - 06-06-2026
 - Addition: Module help button now links to the Joomill documentation page instead of the generic Joomla help
-- Addition: Rebuilt on the modern namespaced module structure (Joomla 4/5/6) with DI service provider, dispatcher and helper
+- Addition: Rebuilt on the modern namespaced module structure (Joomla 5/6) with DI service provider, dispatcher and helper
 - Addition: Highlight colour picker (now available in the free version)
 - Addition: Upgrade-to-PRO call to action and PRO feature teasers in the module options
 - Security: Escape admin-provided parameter values in the module output
