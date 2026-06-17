@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="Update workspace configuration for V4.1.0 compatibility with Joomla 5" />
+    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="Move unreleased changelog entry to version 6.1.0 section">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod_openinghours.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mod_openinghours.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.php" beforeDir="false" afterPath="$PROJECT_DIR$/script.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +24,7 @@
     <execution />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="36" />
+    <option name="cachedIndexableFilesCount" value="35" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -50,23 +55,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.000000000000111" />
-      <entry key="M2" value="1.0000003369673305" />
-      <entry key="M5" value="1.002989913030611" />
-      <entry key="M10" value="1.071257573537177" />
-      <entry key="M15" value="1.212061885892324" />
-      <entry key="M30" value="1.64416180636181" />
-      <entry key="H1" value="2.1318828297295926" />
-      <entry key="H2" value="2.503527917272095" />
-      <entry key="H4" value="2.733782413298845" />
-      <entry key="D1" value="2.9529007922069104" />
-      <entry key="W1" value="2.993201437294891" />
+      <entry key="MS100" value="1.0210903712264114" />
+      <entry key="MS500" value="1.6702005026019326" />
+      <entry key="S2" value="3.5670859603972205" />
+      <entry key="S5" value="5.021343487757506" />
+      <entry key="S10" value="5.8441167906708404" />
+      <entry key="S30" value="6.56713742876551" />
+      <entry key="S60" value="6.776781971195572" />
+      <entry key="M2" value="6.8866231425767745" />
+      <entry key="M5" value="6.957144263999283" />
+      <entry key="M10" value="7.047562918384538" />
+      <entry key="M15" value="7.195286144750497" />
+      <entry key="M30" value="7.634285655127426" />
+      <entry key="H1" value="8.126106432594142" />
+      <entry key="H2" value="8.500320392585706" />
+      <entry key="H4" value="8.732079731029035" />
+      <entry key="D1" value="8.952601322046629" />
+      <entry key="W1" value="8.993158243591632" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -88,23 +93,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.16724094434826398" />
-      <entry key="MS500" value="0.6993080413692306" />
-      <entry key="S2" value="0.9144650894999015" />
-      <entry key="S5" value="0.9648656650679005" />
-      <entry key="S10" value="0.9822757581595407" />
-      <entry key="S30" value="0.9940566661484671" />
-      <entry key="S60" value="0.9970239045021375" />
-      <entry key="M2" value="0.9985111794292698" />
-      <entry key="M5" value="1.0023904315562917" />
-      <entry key="M10" value="1.0709170009698432" />
-      <entry key="M15" value="1.2117785571942061" />
-      <entry key="M30" value="1.643933568512319" />
-      <entry key="H1" value="2.1317197643086994" />
-      <entry key="H2" value="2.503427718174746" />
-      <entry key="H4" value="2.733726528525369" />
-      <entry key="D1" value="2.9528905602309665" />
-      <entry key="W1" value="2.993199951464227" />
+      <entry key="MS100" value="0.9527109906431454" />
+      <entry key="MS500" value="1.646687239877268" />
+      <entry key="S2" value="3.5470570668090704" />
+      <entry key="S5" value="5.001228810570937" />
+      <entry key="S10" value="5.828730146117972" />
+      <entry key="S30" value="6.560121233206306" />
+      <entry key="S60" value="6.772975306770442" />
+      <entry key="M2" value="6.8846395384957395" />
+      <entry key="M5" value="6.956327311904102" />
+      <entry key="M10" value="7.04711065006449" />
+      <entry key="M15" value="7.194927888711216" />
+      <entry key="M30" value="7.6340197285076625" />
+      <entry key="H1" value="8.125924401938775" />
+      <entry key="H2" value="8.50021065467999" />
+      <entry key="H4" value="8.732019057275785" />
+      <entry key="D1" value="8.952590288564407" />
+      <entry key="W1" value="8.993156643168799" />
     </decayedShown>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Laragon PHP">
@@ -181,6 +186,9 @@
       <workItem from="1780729690678" duration="3113000" />
       <workItem from="1780738488672" duration="5000" />
       <workItem from="1780749600044" duration="4768000" />
+      <workItem from="1780779304238" duration="941000" />
+      <workItem from="1780855588436" duration="339000" />
+      <workItem from="1781717339529" duration="388000" />
     </task>
     <task id="LOCAL-00001" summary="V4.0.0 - PHPStorm">
       <created>1628547103245</created>
@@ -310,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780754828610</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Move unreleased changelog entry to version 6.1.0 section">
+      <option name="closed" value="true" />
+      <created>1780779328198</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1780779328198</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,6 +357,7 @@
     <MESSAGE value="V4.0.1 - Fixes issue with PHP errors/warnings on PHP 8.1 &amp; Fixes Changelog and Update URLs" />
     <MESSAGE value="V4.1.0 - Compatible with J5" />
     <MESSAGE value="Update workspace configuration for V4.1.0 compatibility with Joomla 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workspace configuration for V4.1.0 compatibility with Joomla 5" />
+    <MESSAGE value="Move unreleased changelog entry to version 6.1.0 section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move unreleased changelog entry to version 6.1.0 section" />
   </component>
 </project>

@@ -9,31 +9,29 @@
 // No direct access.
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
 use Joomla\CMS\Installer\InstallerAdapter;
+use Joomla\CMS\Installer\InstallerScriptInterface;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Log\Log;
 
 /**
- * Joomill Opening Hours (FREE) installer script
- *
- * Handles the installation, update and uninstallation of the FREE Opening Hours
- * module. It checks the minimum requirements and shows an upgrade-to-PRO call to
- * action after installation.
+ * Installation script class for the Opening Hours (FREE) module
  *
  * @since  6.0.0
  */
-class mod_openinghoursInstallerScript
+class mod_openinghoursInstallerScript implements InstallerScriptInterface
 {
 	/**
-	 * Minimum Joomla version to check.
+	 * Minimum Joomla version to check
 	 *
 	 * @var    string
 	 * @since  6.0.0
 	 */
-	private $minimumJoomlaVersion = '4.0';
+	private $minimumJoomlaVersion = '5.0';
 
 	/**
-	 * Minimum PHP version to check.
+	 * Minimum PHP version to check
 	 *
 	 * @var    string
 	 * @since  6.0.0
@@ -41,97 +39,198 @@ class mod_openinghoursInstallerScript
 	private $minimumPHPVersion = JOOMLA_MINIMUM_PHP;
 
 	/**
-	 * Function called before extension installation/update/removal procedure commences.
+	 * Function called after the extension is installed
 	 *
-	 * @param   string            $type    The type of change (install, update or discover_install, not uninstall)
-	 * @param   InstallerAdapter  $parent  The class calling this method
+	 * @param   InstallerAdapter  $adapter  The adapter calling this method
 	 *
-	 * @return  boolean  True on success, false if requirements are not met
+	 * @return  boolean  True on success
 	 *
-	 * @throws  Exception
-	 * @since   6.0.0
+	 * @since   6.2.0
 	 */
-	public function preflight($type, $parent): bool
+	public function install(InstallerAdapter $adapter): bool
 	{
-		if ($type !== 'uninstall') {
-			// Check for the minimum PHP version before continuing
-			if (!empty($this->minimumPHPVersion) && version_compare(PHP_VERSION, $this->minimumPHPVersion, '<')) {
-				Log::add(Text::sprintf('JLIB_INSTALLER_MINIMUM_PHP', $this->minimumPHPVersion), Log::WARNING, 'jerror');
-
-				return false;
-			}
-
-			// Check for the minimum Joomla version before continuing
-			if (!empty($this->minimumJoomlaVersion) && version_compare(JVERSION, $this->minimumJoomlaVersion, '<')) {
-				Log::add(Text::sprintf('JLIB_INSTALLER_MINIMUM_JOOMLA', $this->minimumJoomlaVersion), Log::WARNING, 'jerror');
-
-				return false;
-			}
-		}
-
 		return true;
 	}
 
 	/**
-	 * Function called after extension installation/update/removal procedure commences.
+	 * Function called after the extension is updated
 	 *
-	 * @param   string            $type    The type of change (install, update or discover_install, not uninstall)
-	 * @param   InstallerAdapter  $parent  The class calling this method
+	 * @param   InstallerAdapter  $adapter  The adapter calling this method
+	 *
+	 * @return  boolean  True on success
+	 *
+	 * @since   6.2.0
+	 */
+	public function update(InstallerAdapter $adapter): bool
+	{
+		return true;
+	}
+
+	/**
+	 * Function called after the extension is uninstalled
+	 *
+	 * @param   InstallerAdapter  $adapter  The adapter calling this method
+	 *
+	 * @return  boolean  True on success
+	 *
+	 * @since   6.2.0
+	 */
+	public function uninstall(InstallerAdapter $adapter): bool
+	{
+		return true;
+	}
+
+	/**
+	 * Function called before extension installation/update/removal procedure commences
+	 *
+	 * @param   string            $type    The type of change (install, update, discover_install or uninstall)
+	 * @param   InstallerAdapter  $parent  The adapter calling this method
 	 *
 	 * @return  boolean  True on success
 	 *
 	 * @since   6.0.0
 	 */
-	public function postflight($type, $parent)
+	public function preflight(string $type, InstallerAdapter $parent): bool
 	{
-		if ($type === 'install' || $type === 'update') {
-			echo '<style>a[target="_blank"]::before {display: none;}</style>';
-			echo '<div class="mb-3 text-center"><img src="https://www.joomill-extensions.com/images/joomill-logo.png" alt="Joomill Extensions" /></div>';
-			echo '<div class="mb-3 text-center"><strong>' . Text::_('MOD_OPENINGHOURS_XML_DESCRIPTION') . '</strong></div>';
-			echo '<div class="mb-3 text-center">' . Text::_('MOD_OPENINGHOURS_THANKYOU') . '</div>';
-
-			echo '<h3>' . Text::_('MOD_OPENINGHOURS_INSTALL_QUICKSTART') . ':</h3>';
-			echo '<ul>';
-			echo '<li><a style="text-decoration: underline;" href="index.php?option=com_modules&view=modules&client_id=0&filter[module]=mod_openinghours" target="_blank">' . Text::_('MOD_OPENINGHOURS_INSTALL_CONFIGURATION') . '</a></li>';
-			echo '<li><a style="text-decoration: underline;" href="https://www.joomill-extensions.com/extensions/opening-hours-days-week-closings" target="_blank">' . Text::_('MOD_OPENINGHOURS_INSTALL_NEEDHELP') . '</a></li>';
-			echo '</ul>';
-			echo '<hr>';
-			echo $this->getSocialLinks();
+		try {
+			if ($type !== 'uninstall') {
+				// Check for the minimum PHP version before continuing
+				if (!empty($this->minimumPHPVersion) && version_compare(PHP_VERSION, $this->minimumPHPVersion, '<')) {
+					Log::add(
+						Text::sprintf('JLIB_INSTALLER_MINIMUM_PHP', $this->minimumPHPVersion),
+						Log::WARNING,
+						'jerror'
+					);
+					return false;
+				}
+				// Check for the minimum Joomla version before continuing
+				if (!empty($this->minimumJoomlaVersion) && version_compare(JVERSION, $this->minimumJoomlaVersion, '<')) {
+					Log::add(
+						Text::sprintf('JLIB_INSTALLER_MINIMUM_JOOMLA', $this->minimumJoomlaVersion),
+						Log::WARNING,
+						'jerror'
+					);
+					return false;
+				}
+			}
+			return true;
+		} catch (\Exception $e) {
+			Log::add('Error during preflight check: ' . $e->getMessage(), Log::ERROR, 'openinghours');
+			return false;
 		}
-
-		if ($type === 'uninstall') {
-			echo '<style>a[target="_blank"]::before {display: none;}</style>';
-			echo '<div class="mb-3 text-center"><img src="https://www.joomill-extensions.com/images/joomill-logo.png" alt="Joomill Extensions" /></div>';
-			echo '<br>';
-			echo '<h3 class="text-center">' . Text::_('MOD_OPENINGHOURS_THANKYOU') . '</h3>';
-			echo '<br>';
-			echo $this->getSocialLinks();
-		}
-
-		return true;
 	}
 
 	/**
-	 * Returns the Joomill social media links block.
+	 * Function called after extension installation/update/removal procedure commences
 	 *
-	 * @return  string  The social links markup.
+	 * @param   string            $type    The type of change (install, update, discover_install or uninstall)
+	 * @param   InstallerAdapter  $parent  The adapter calling this method
+	 *
+	 * @return  boolean  True on success
 	 *
 	 * @since   6.0.0
 	 */
-	private function getSocialLinks(): string
+	public function postflight(string $type, InstallerAdapter $parent): bool
 	{
-		$html  = '<div class="text-center">' . Text::_('MOD_OPENINGHOURS_FOLLOWME') . ':</div>';
-		$html .= '<div class="text-center">';
-		$html .= '<a class="m-2" href="https://www.linkedin.com/in/jeroenmoolenschot/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>';
-		$html .= '<a class="m-2" href="https://www.facebook.com/Joomill" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>';
-		$html .= '<a class="m-2" href="https://www.instagram.com/Joomill" target="_blank"><i class="fa-brands fa-instagram"></i></a>';
-		$html .= '<a class="m-2" href="https://bsky.app/profile/joomill.bsky.social" target="_blank"><i class="fa-brands fa-bluesky"></i></a>';
-		$html .= '<a class="m-2" href="https://joomla.social/@joomill" target="_blank"><i class="fa-brands fa-mastodon"></i></a>';
-		$html .= '<a class="m-2" href="https://www.threads.net/@joomill" target="_blank"><i class="fa-brands fa-threads"></i></a>';
-		$html .= '<a class="m-2" href="https://www.twitter.com/Joomill" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>';
-		$html .= '<a class="m-2" href="https://community.joomla.org/service-providers-directory/listings/67:joomill.html" target="_blank"><i class="fa-brands fa-joomla"></i></a>';
-		$html .= '</div>';
+		try {
+			$this->loadInstallLanguage();
 
-		return $html;
+			if ($type === 'install') {
+				$this->printInstallMessage();
+			}
+
+			if ($type === 'uninstall') {
+				$this->printUninstallMessage();
+			}
+
+			return true;
+		} catch (\Exception $e) {
+			Log::add('Error during postflight: ' . $e->getMessage(), Log::ERROR, 'openinghours');
+			// Still return true to not block the installation/uninstallation process
+			// The error is logged but we don't want to prevent the process from completing
+			return true;
+		}
+	}
+
+	/**
+	 * Make the module install strings available to the script
+	 *
+	 * The installer normally auto-loads the .sys.ini; this is a safety net so the
+	 * install and uninstall screens never show raw language keys.
+	 *
+	 * @return  void
+	 *
+	 * @since   6.2.0
+	 */
+	private function loadInstallLanguage(): void
+	{
+		$language = Factory::getApplication()->getLanguage();
+		$language->load('mod_openinghours.sys', JPATH_SITE)
+			|| $language->load('mod_openinghours.sys', JPATH_SITE . '/modules/mod_openinghours');
+	}
+
+	/**
+	 * Render the Joomill thank-you and quickstart screen after installation
+	 *
+	 * @return  void
+	 *
+	 * @since   6.2.0
+	 */
+	private function printInstallMessage(): void
+	{
+		echo '<style>a[target="_blank"]::before {display: none;}</style>';
+		echo '<div class="mb-3 text-center"><img src="https://www.joomill-extensions.com/images/joomill-logo.png" alt="Joomill Extensions" /></div>';
+		echo '<div class="mb-3 text-center"><strong>' . Text::_('MOD_OPENINGHOURS_XML_DESCRIPTION') . '</strong></div>';
+		echo '<div class="mb-3 text-center">' . Text::_('MOD_OPENINGHOURS_THANKYOU') . '</div>';
+		echo '<br>';
+		echo '<h3>' . Text::_('MOD_OPENINGHOURS_INSTALL_QUICKSTART') . ':</h3>';
+		echo '<ul>';
+		echo '<li><a style="text-decoration: underline;" href="index.php?option=com_modules&view=modules&client_id=0&filter[module]=mod_openinghours" target="_blank">' . Text::_('MOD_OPENINGHOURS_INSTALL_CONFIGURATION') . '</a></li>';
+		echo '<li><a style="text-decoration: underline;" href="https://www.joomill-extensions.com/extensions/opening-hours-days-week-closings" target="_blank">' . Text::_('MOD_OPENINGHOURS_INSTALL_NEEDHELP') . '</a></li>';
+		echo '</ul>';
+		echo '<hr>';
+		echo '<div class="text-center">' . Text::_('MOD_OPENINGHOURS_FOLLOWME') . ':</div>';
+		echo $this->socialIcons();
+	}
+
+	/**
+	 * Render the Joomill thank-you screen after uninstallation
+	 *
+	 * @return  void
+	 *
+	 * @since   6.2.0
+	 */
+	private function printUninstallMessage(): void
+	{
+		echo '<style>a[target="_blank"]::before {display: none;}</style>';
+		echo '<div class="mb-3 text-center"><img src="https://www.joomill-extensions.com/images/joomill-logo.png" alt="Joomill Extensions" /></div>';
+		echo '<br>';
+		echo '<h3 class="text-center">' . Text::_('MOD_OPENINGHOURS_THANKYOU') . '</h3>';
+		echo '<br>';
+		echo '<div class="text-center">' . Text::_('MOD_OPENINGHOURS_FOLLOWME') . ':</div>';
+		echo $this->socialIcons();
+	}
+
+	/**
+	 * Render the Joomill social media follow links
+	 *
+	 * @return  string  The social links HTML
+	 *
+	 * @since   6.2.0
+	 */
+	private function socialIcons(): string
+	{
+		return '<div class="text-center">'
+			. '<a class="m-2" href="https://www.linkedin.com/in/jeroenmoolenschot/" target="_blank"><i class="fa-brands fa-linkedin"> </i></a>'
+			. '<a class="m-2" href="https://www.facebook.com/Joomill" target="_blank"><i class="fa-brands fa-facebook-f"> </i></a>'
+			. '<a class="m-2" href="https://www.instagram.com/Joomill" target="_blank"><i class="fa-brands fa-instagram"> </i></a>'
+			. '<a class="m-2" href="https://bsky.app/profile/joomill.bsky.social" target="_blank"><i class="fa-brands fa-bluesky"> </i></a>'
+			. '<a class="m-2" href="https://joomla.social/@joomill" target="_blank"><i class="fa-brands fa-mastodon"> </i></a>'
+			. '<a class="m-2" href="https://www.threads.net/@joomill" target="_blank"><i class="fa-brands fa-threads"> </i></a>'
+			. '<a class="m-2" href="https://www.twitter.com/Joomill" target="_blank"><i class="fa-brands fa-x-twitter"> </i></a>'
+			. '<a class="m-2" href="https://community.joomla.org/service-providers-directory/listings/67:joomill.html" target="_blank"><i class="fa-brands fa-joomla"> </i></a>'
+			. '</div>';
 	}
 }
+
+return new mod_openinghoursInstallerScript();
