@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="Rebuild installer script: implement `InstallerScriptInterface`, add typed method signatures, enhance error handling, and include install language safety net. Bump version to 6.2.0.">
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dispatcher/Dispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dispatcher/Dispatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/OpeninghoursHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/OpeninghoursHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmpl/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/tmpl/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmpl/default_openinghours.php" beforeDir="false" afterPath="$PROJECT_DIR$/tmpl/default_openinghours.php" afterDir="false" />
+    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="Refactor module helper usage: replace static methods with instance methods, inject helper through HelperFactory, and move layout data preparation to dispatcher.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +185,7 @@
       <workItem from="1780749600044" duration="4768000" />
       <workItem from="1780779304238" duration="941000" />
       <workItem from="1780855588436" duration="339000" />
-      <workItem from="1781717339529" duration="1018000" />
+      <workItem from="1781717339529" duration="2209000" />
     </task>
     <task id="LOCAL-00001" summary="V4.0.0 - PHPStorm">
       <created>1628547103245</created>
@@ -335,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781717733204</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Refactor module helper usage: replace static methods with instance methods, inject helper through HelperFactory, and move layout data preparation to dispatcher.">
+      <option name="closed" value="true" />
+      <created>1781718536553</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1781718536553</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +372,7 @@
     <MESSAGE value="Update workspace configuration for V4.1.0 compatibility with Joomla 5" />
     <MESSAGE value="Move unreleased changelog entry to version 6.1.0 section" />
     <MESSAGE value="Rebuild installer script: implement `InstallerScriptInterface`, add typed method signatures, enhance error handling, and include install language safety net. Bump version to 6.2.0." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuild installer script: implement `InstallerScriptInterface`, add typed method signatures, enhance error handling, and include install language safety net. Bump version to 6.2.0." />
+    <MESSAGE value="Refactor module helper usage: replace static methods with instance methods, inject helper through HelperFactory, and move layout data preparation to dispatcher." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor module helper usage: replace static methods with instance methods, inject helper through HelperFactory, and move layout data preparation to dispatcher." />
   </component>
 </project>
