@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="Move unreleased changelog entry to version 6.1.0 section">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="Rebuild installer script: implement `InstallerScriptInterface`, add typed method signatures, enhance error handling, and include install language safety net. Bump version to 6.2.0.">
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mod_openinghours.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mod_openinghours.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.php" beforeDir="false" afterPath="$PROJECT_DIR$/script.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dispatcher/Dispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dispatcher/Dispatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helper/OpeninghoursHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/OpeninghoursHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpl/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/tmpl/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpl/default_openinghours.php" beforeDir="false" afterPath="$PROJECT_DIR$/tmpl/default_openinghours.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,23 +56,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0210903712264114" />
-      <entry key="MS500" value="1.6702005026019326" />
-      <entry key="S2" value="3.5670859603972205" />
-      <entry key="S5" value="5.021343487757506" />
-      <entry key="S10" value="5.8441167906708404" />
-      <entry key="S30" value="6.56713742876551" />
-      <entry key="S60" value="6.776781971195572" />
-      <entry key="M2" value="6.8866231425767745" />
-      <entry key="M5" value="6.957144263999283" />
-      <entry key="M10" value="7.047562918384538" />
-      <entry key="M15" value="7.195286144750497" />
-      <entry key="M30" value="7.634285655127426" />
-      <entry key="H1" value="8.126106432594142" />
-      <entry key="H2" value="8.500320392585706" />
-      <entry key="H4" value="8.732079731029035" />
-      <entry key="D1" value="8.952601322046629" />
-      <entry key="W1" value="8.993158243591632" />
+      <entry key="MS100" value="1.0000000583824726" />
+      <entry key="MS500" value="1.0594582702872544" />
+      <entry key="S2" value="2.5494390259277955" />
+      <entry key="S5" value="4.597197613609563" />
+      <entry key="S10" value="5.946420910941284" />
+      <entry key="S30" value="7.21202935176081" />
+      <entry key="S60" value="7.591013641731746" />
+      <entry key="M2" value="7.791577584508497" />
+      <entry key="M5" value="7.918576517202312" />
+      <entry key="M10" value="8.028001273521546" />
+      <entry key="M15" value="8.18196552810884" />
+      <entry key="M30" value="8.627215713758794" />
+      <entry key="H1" value="9.122342858250962" />
+      <entry key="H2" value="9.49835171957752" />
+      <entry key="H4" value="9.731068498256105" />
+      <entry key="D1" value="9.952428518602131" />
+      <entry key="W1" value="9.993133445347105" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -93,23 +94,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9527109906431454" />
-      <entry key="MS500" value="1.646687239877268" />
-      <entry key="S2" value="3.5470570668090704" />
-      <entry key="S5" value="5.001228810570937" />
-      <entry key="S10" value="5.828730146117972" />
-      <entry key="S30" value="6.560121233206306" />
-      <entry key="S60" value="6.772975306770442" />
-      <entry key="M2" value="6.8846395384957395" />
-      <entry key="M5" value="6.956327311904102" />
-      <entry key="M10" value="7.04711065006449" />
-      <entry key="M15" value="7.194927888711216" />
-      <entry key="M30" value="7.6340197285076625" />
-      <entry key="H1" value="8.125924401938775" />
-      <entry key="H2" value="8.50021065467999" />
-      <entry key="H4" value="8.732019057275785" />
-      <entry key="D1" value="8.952590288564407" />
-      <entry key="W1" value="8.993156643168799" />
+      <entry key="MS100" value="0.016176068907793963" />
+      <entry key="MS500" value="0.4969240710065159" />
+      <entry key="S2" value="2.3544001962723717" />
+      <entry key="S5" value="4.503613528064137" />
+      <entry key="S10" value="5.892994391648111" />
+      <entry key="S30" value="7.1917391915659135" />
+      <entry key="S60" value="7.580461187744997" />
+      <entry key="M2" value="7.786190401544748" />
+      <entry key="M5" value="7.916390296593746" />
+      <entry key="M10" value="8.026863125776234" />
+      <entry key="M15" value="8.181149792984693" />
+      <entry key="M30" value="8.6267209360032" />
+      <entry key="H1" value="9.12204635663866" />
+      <entry key="H2" value="9.498184727814769" />
+      <entry key="H4" value="9.730979191482993" />
+      <entry key="D1" value="9.952412711934869" />
+      <entry key="W1" value="9.993131163013288" />
     </decayedShown>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Laragon PHP">
@@ -188,7 +189,7 @@
       <workItem from="1780749600044" duration="4768000" />
       <workItem from="1780779304238" duration="941000" />
       <workItem from="1780855588436" duration="339000" />
-      <workItem from="1781717339529" duration="388000" />
+      <workItem from="1781717339529" duration="1018000" />
     </task>
     <task id="LOCAL-00001" summary="V4.0.0 - PHPStorm">
       <created>1628547103245</created>
@@ -326,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780779328198</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Rebuild installer script: implement `InstallerScriptInterface`, add typed method signatures, enhance error handling, and include install language safety net. Bump version to 6.2.0.">
+      <option name="closed" value="true" />
+      <created>1781717733203</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1781717733204</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +367,7 @@
     <MESSAGE value="V4.1.0 - Compatible with J5" />
     <MESSAGE value="Update workspace configuration for V4.1.0 compatibility with Joomla 5" />
     <MESSAGE value="Move unreleased changelog entry to version 6.1.0 section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move unreleased changelog entry to version 6.1.0 section" />
+    <MESSAGE value="Rebuild installer script: implement `InstallerScriptInterface`, add typed method signatures, enhance error handling, and include install language safety net. Bump version to 6.2.0." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuild installer script: implement `InstallerScriptInterface`, add typed method signatures, enhance error handling, and include install language safety net. Bump version to 6.2.0." />
   </component>
 </project>
