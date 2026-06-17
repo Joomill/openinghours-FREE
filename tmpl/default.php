@@ -23,6 +23,10 @@ use Joomla\CMS\Language\Text;
 $wa = $app->getDocument()->getWebAssetManager();
 $wa->registerAndUseStyle('mod_openinghours.style', 'modules/mod_openinghours/css/style.css');
 
+if ($params->get('custom_css')) {
+    $wa->addInlineStyle($params->get('custom_css'));
+}
+
 $timezone = $params->get('Timezone');
 ?>
 

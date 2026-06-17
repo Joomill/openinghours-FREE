@@ -7,6 +7,7 @@ All notable changes to the FREE Opening Hours module are documented in this file
 - Addition: Basic JSON-LD structured data (OpeningHoursSpecification) for the regular weekly hours; rich LocalBusiness data and special/exceptional hours stay PRO teasers
 
 ## [6.2.0] - UNRELEASED
+- Addition: Custom CSS field in the advanced options to add inline styling, output through the WebAssetManager
 - Change: Rebuilt the installer script to the Joomill standard (InstallerScriptInterface, typed signatures, install language safety net and error logging)
 - Change: Helper now resolved through the module HelperFactory with instance methods instead of static calls; layout data prepared in the dispatcher
 

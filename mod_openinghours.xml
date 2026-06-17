@@ -221,6 +221,16 @@
                         label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
                 />
                 <field
+                        type="editor"
+                        name="custom_css"
+                        label="MOD_OPENINGHOURS_CUSTOM_CSS_LABEL"
+                        default=""
+                        rows="10"
+                        buttons="no"
+                        editor="codemirror|none"
+                        filter="raw"
+                />
+                <field
                         name="Debug"
                         type="radio"
                         class="btn-group"
