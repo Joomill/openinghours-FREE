@@ -1,2 +1,4 @@
 # Build artifacts
 *.zip
+
+dist/
