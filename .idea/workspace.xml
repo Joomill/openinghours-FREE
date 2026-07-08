@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="Refactor module helper usage: replace static methods with instance methods, inject helper through HelperFactory, and move layout data preparation to dispatcher.">
+    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="Update workspace task and commit history for refactored module helper usage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod_openinghours.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mod_openinghours.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.php" beforeDir="false" afterPath="$PROJECT_DIR$/script.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +24,7 @@
     <execution />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="35" />
+    <option name="cachedIndexableFilesCount" value="37" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -52,23 +55,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000583824726" />
-      <entry key="MS500" value="1.0594582702872544" />
-      <entry key="S2" value="2.5494390259277955" />
-      <entry key="S5" value="4.597197613609563" />
-      <entry key="S10" value="5.946420910941284" />
-      <entry key="S30" value="7.21202935176081" />
-      <entry key="S60" value="7.591013641731746" />
-      <entry key="M2" value="7.791577584508497" />
-      <entry key="M5" value="7.918576517202312" />
-      <entry key="M10" value="8.028001273521546" />
-      <entry key="M15" value="8.18196552810884" />
-      <entry key="M30" value="8.627215713758794" />
-      <entry key="H1" value="9.122342858250962" />
-      <entry key="H2" value="9.49835171957752" />
-      <entry key="H4" value="9.731068498256105" />
-      <entry key="D1" value="9.952428518602131" />
-      <entry key="W1" value="9.993133445347105" />
+      <entry key="MS100" value="1.0000254857916526" />
+      <entry key="MS500" value="1.1463651351800548" />
+      <entry key="S2" value="2.882868820995575" />
+      <entry key="S5" value="5.758137761321638" />
+      <entry key="S10" value="8.036577104785296" />
+      <entry key="S30" value="10.413895690671751" />
+      <entry key="S60" value="11.16706212158685" />
+      <entry key="M2" value="11.572955427805342" />
+      <entry key="M5" value="11.829448743693373" />
+      <entry key="M10" value="11.982858559246663" />
+      <entry key="M15" value="12.151394626002345" />
+      <entry key="M30" value="12.61126185073826" />
+      <entry key="H1" value="13.113997342594208" />
+      <entry key="H2" value="13.494039314815508" />
+      <entry key="H4" value="13.728869114955682" />
+      <entry key="D1" value="13.952055111803762" />
+      <entry key="W1" value="13.993079921792878" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -90,23 +93,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.016176068907793963" />
-      <entry key="MS500" value="0.4969240710065159" />
-      <entry key="S2" value="2.3544001962723717" />
-      <entry key="S5" value="4.503613528064137" />
-      <entry key="S10" value="5.892994391648111" />
-      <entry key="S30" value="7.1917391915659135" />
-      <entry key="S60" value="7.580461187744997" />
-      <entry key="M2" value="7.786190401544748" />
-      <entry key="M5" value="7.916390296593746" />
-      <entry key="M10" value="8.026863125776234" />
-      <entry key="M15" value="8.181149792984693" />
-      <entry key="M30" value="8.6267209360032" />
-      <entry key="H1" value="9.12204635663866" />
-      <entry key="H2" value="9.498184727814769" />
-      <entry key="H4" value="9.730979191482993" />
-      <entry key="D1" value="9.952412711934869" />
-      <entry key="W1" value="9.993131163013288" />
+      <entry key="MS100" value="0.9395462009280509" />
+      <entry key="MS500" value="1.1288733248499014" />
+      <entry key="S2" value="2.8228258530813077" />
+      <entry key="S5" value="5.698183804105089" />
+      <entry key="S10" value="7.992735866134582" />
+      <entry key="S30" value="10.394255163516512" />
+      <entry key="S60" value="11.156416528847892" />
+      <entry key="M2" value="11.567407179126807" />
+      <entry key="M5" value="11.827169230131044" />
+      <entry key="M10" value="11.981668994985954" />
+      <entry key="M15" value="12.15054362960028" />
+      <entry key="M30" value="12.61074895196895" />
+      <entry key="H1" value="13.113691629825196" />
+      <entry key="H2" value="13.49386766857128" />
+      <entry key="H4" value="13.728777466324155" />
+      <entry key="D1" value="13.952038912526387" />
+      <entry key="W1" value="13.993077583311496" />
     </decayedShown>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Laragon PHP">
@@ -152,8 +155,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.25134.104" />
-        <option value="bundled-php-predefined-a98d8de5180a-6bbb74dbab74-com.jetbrains.php.sharedIndexes-PS-261.25134.104" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.26222.71" />
+        <option value="bundled-php-predefined-a98d8de5180a-6bbb74dbab74-com.jetbrains.php.sharedIndexes-PS-261.26222.71" />
       </set>
     </attachedChunks>
   </component>
@@ -185,7 +188,9 @@
       <workItem from="1780749600044" duration="4768000" />
       <workItem from="1780779304238" duration="941000" />
       <workItem from="1780855588436" duration="339000" />
-      <workItem from="1781717339529" duration="2209000" />
+      <workItem from="1781717339529" duration="2347000" />
+      <workItem from="1783166599890" duration="1605000" />
+      <workItem from="1783528491347" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="V4.0.0 - PHPStorm">
       <created>1628547103245</created>
@@ -339,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781718536553</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update workspace task and commit history for refactored module helper usage">
+      <option name="closed" value="true" />
+      <created>1781720901998</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1781720901998</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,6 +386,7 @@
     <MESSAGE value="Move unreleased changelog entry to version 6.1.0 section" />
     <MESSAGE value="Rebuild installer script: implement `InstallerScriptInterface`, add typed method signatures, enhance error handling, and include install language safety net. Bump version to 6.2.0." />
     <MESSAGE value="Refactor module helper usage: replace static methods with instance methods, inject helper through HelperFactory, and move layout data preparation to dispatcher." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor module helper usage: replace static methods with instance methods, inject helper through HelperFactory, and move layout data preparation to dispatcher." />
+    <MESSAGE value="Update workspace task and commit history for refactored module helper usage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace task and commit history for refactored module helper usage" />
   </component>
 </project>
