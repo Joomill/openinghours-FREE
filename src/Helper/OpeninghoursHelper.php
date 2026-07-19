@@ -1,9 +1,11 @@
 <?php
-/*
- *  package: Joomla Opening Hours module - FREE Version
- *  copyright: Copyright (c) 2026. Jeroen Moolenschot | Joomill
- *  license: GNU General Public License version 3 or later
- *  link: https://www.joomill-extensions.com
+
+/**
+ * Opening Hours
+ *
+ * @copyright   Copyright (c) 2026 Jeroen Moolenschot | Joomill
+ * @license     GNU General Public License version 3 or later; see LICENSE
+ * @link        https://www.joomill-extensions.com
  */
 
 namespace Joomill\Module\Openinghours\Site\Helper;

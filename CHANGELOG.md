@@ -2,6 +2,9 @@
 
 All notable changes to the FREE Opening Hours module are documented in this file.
 
+## 6.2.2 - Unreleased
+- Improvement: PHP file headers updated to the standard Joomla docblock copyright format; code style only, no functional changes
+
 ## TODO
 - Layout default optie ziet er anders uit.
 - Addition: Basic JSON-LD structured data (OpeningHoursSpecification) for the regular weekly hours; rich LocalBusiness data and special/exceptional hours stay PRO teasers
