@@ -25,20 +25,20 @@ use Joomla\DI\ServiceProviderInterface;
  * @since  6.0.0
  */
 return new class () implements ServiceProviderInterface {
-	/**
-	 * Registers the service provider with a DI container.
-	 *
-	 * @param   Container  $container  The DI container.
-	 *
-	 * @return  void
-	 *
-	 * @since   6.0.0
-	 */
-	public function register(Container $container)
-	{
-		$container->registerServiceProvider(new ModuleDispatcherFactory('\\Joomill\\Module\\Openinghours'));
-		$container->registerServiceProvider(new HelperFactory('\\Joomill\\Module\\Openinghours\\Site\\Helper'));
+    /**
+     * Registers the service provider with a DI container.
+     *
+     * @param   Container  $container  The DI container.
+     *
+     * @return  void
+     *
+     * @since   6.0.0
+     */
+    public function register(Container $container)
+    {
+        $container->registerServiceProvider(new ModuleDispatcherFactory('\\Joomill\\Module\\Openinghours'));
+        $container->registerServiceProvider(new HelperFactory('\\Joomill\\Module\\Openinghours\\Site\\Helper'));
 
-		$container->registerServiceProvider(new Module());
-	}
+        $container->registerServiceProvider(new Module());
+    }
 };

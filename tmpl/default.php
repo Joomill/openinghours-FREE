@@ -34,22 +34,22 @@ $timezone = $params->get('Timezone');
 
 <div style="width:<?php echo htmlspecialchars($params->get('Width'), ENT_QUOTES); ?>; margin: auto;">
 
-	<?php require ModuleHelper::getLayoutPath('mod_openinghours', $params->get('layout', 'default') . '_openinghours'); ?>
+    <?php require ModuleHelper::getLayoutPath('mod_openinghours', $params->get('layout', 'default') . '_openinghours'); ?>
 
-	<?php if ($params->get('Usemicro')) : ?>
-		<?php require ModuleHelper::getLayoutPath('mod_openinghours', $params->get('layout', 'default') . '_microdata'); ?>
-	<?php endif; ?>
+    <?php if ($params->get('Usemicro')) : ?>
+        <?php require ModuleHelper::getLayoutPath('mod_openinghours', $params->get('layout', 'default') . '_microdata'); ?>
+    <?php endif; ?>
 
-	<?php if ($params->get('Footer', 1)) : ?>
+    <?php if ($params->get('Footer', 1)) : ?>
         <div class="openinghours-credit" style="font-size:9px; padding: 5px 10px 5px 0; text-align:center">
             <a href="https://www.joomill-extensions.com/extensions/opening-hours-days-week-closings" rel="nofollow" target="_blank"><?php echo Text::_('MOD_OPENINGHOURS_FOOTER_CREDIT'); ?></a>
         </div>
-	<?php endif; ?>
+    <?php endif; ?>
 
-	<?php if ($params->get('Debug', 0)) : ?>
+    <?php if ($params->get('Debug', 0)) : ?>
         <div class="openinghours-debug" style="font-size:11px; margin-top:10px;">
             <?php echo 'Localtime: ' . $now->format('H:i'); ?><br/>
             <?php echo 'Timezone: ' . htmlspecialchars($timezone, ENT_QUOTES); ?>
         </div>
-	<?php endif; ?>
+    <?php endif; ?>
 </div>

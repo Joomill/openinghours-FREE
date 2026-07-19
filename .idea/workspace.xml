@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="Update workspace task and commit history for refactored module helper usage">
+    <list default="true" id="fc905b70-f850-47e2-a264-9536d2e663fd" name="Changes" comment="Add logging bootstrap for Joomill update server requests  &#10;&#10;Introduce automatic installation of the Joomill Update Logging plugin during module install or update. Diagnostic request headers are now included for update downloads to enhance logging capabilities. Bump version to 6.2.1.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mod_openinghours.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mod_openinghours.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.php" beforeDir="false" afterPath="$PROJECT_DIR$/script.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +21,7 @@
     <execution />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="37" />
+    <option name="cachedIndexableFilesCount" value="38" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">

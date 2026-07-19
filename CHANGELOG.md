@@ -4,6 +4,7 @@ All notable changes to the FREE Opening Hours module are documented in this file
 
 ## 6.2.2 - Unreleased
 - Improvement: PHP file headers updated to the standard Joomla docblock copyright format; code style only, no functional changes
+- Improvement: full code style pass against the Joomla CMS phpcs ruleset (PSR-12): phpcbf auto-fixes for indentation, line endings, brace placement and whitespace, plus phpcs annotations for deliberate exceptions (`_JEXEC` guards, legacy global class names, legacy API naming). Code style only, no functional changes
 
 ## TODO
 - Layout default optie ziet er anders uit.
